@@ -24,18 +24,12 @@
 </template>
 
 <script setup>
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
-// import { Login } from "@/api/interface";
 import { ElNotification } from "element-plus";
-import { loginApi } from "@/api/modules/login";
 import { GlobalStore } from "@/stores";
 import { TabsStore } from "@/stores/modules/tabs";
-import { getTimeState } from "@/utils/util";
-import { HOME_URL } from "@/config/config";
-import { initDynamicRouter } from "@/routers/modules/dynamicRouter";
 import { CircleClose, UserFilled } from "@element-plus/icons-vue";
-import md5 from "js-md5";
 
 const router = useRouter();
 const tabsStore = TabsStore();
@@ -51,32 +45,7 @@ const loginRules = reactive({
 const loading = ref(false);
 const loginForm = reactive({ username: "admin", password: "123456" });
 const login = (formEl) => {
-	if (!formEl) return;
-	formEl.validate(async valid => {
-		if (!valid) return;
-		loading.value = true;
-		try {
-			// 1.执行登录接口
-			const { data } = await loginApi({ ...loginForm, password: md5(loginForm.password) });
-			// globalStore.setToken(data.access_token);
-			// 2.添加动态路由
-			// await initDynamicRouter();
 
-			// 3.清除上个账号的 tab 信息
-			tabsStore.closeMultipleTab();
-
-			// 4.跳转到首页
-			router.push(HOME_URL);
-			ElNotification({
-				title: getTimeState(),
-				message: "欢迎登录 vue-diverse-admin",
-				type: "success",
-				duration: 3000
-			});
-		} finally {
-			loading.value = false;
-		}
-	});
 };
 
 // resetForm
@@ -85,16 +54,7 @@ const resetForm = (formEl) => {
 	formEl.resetFields();
 };
 
-onMounted(() => {
-	// 监听enter事件（调用登录）
-	// document.onkeydown = (e) => {
-	// 	e = window.event || e;
-	// 	if (e.code === "Enter" || e.code === "enter" || e.code === "NumpadEnter") {
-	// 		if (loading.value) return;
-	// 		login(loginFormRef.value);
-	// 	}
-	// };
-});
+
 </script>
 
 <style scoped lang="scss">

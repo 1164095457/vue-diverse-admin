@@ -1,7 +1,6 @@
 import router from "@/routers/index";
 import { isType } from "@/utils/util";
 import { LOGIN_URL } from "@/config/config";
-import { GlobalStore } from "@/stores";
 import { AuthStore } from "@/stores/modules/auth";
 import { notFoundRouter } from "@/routers/modules/staticRouter";
 // 引入 views 文件夹下所有 vue 文件
@@ -12,8 +11,8 @@ const modules = import.meta.glob("@/views/**/*.vue");
  */
 export const initDynamicRouter = async () => {
 	const authStore = AuthStore();
-	const globalStore = GlobalStore();
 	try {
+		await authStore.getAuthMenuList();
 		// 添加动态路由
 		authStore.flatMenuListGet.forEach((item) => {
 			item.children && delete item.children;
@@ -29,7 +28,6 @@ export const initDynamicRouter = async () => {
 		router.addRoute(notFoundRouter);
 	} catch (error) {
 		// 💢 当按钮 || 菜单请求出错时，重定向到登陆页
-		globalStore.setToken("");
 		router.replace(LOGIN_URL);
 		return Promise.reject(error);
 	}

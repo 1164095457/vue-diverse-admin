@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import { GlobalStore } from "@/stores";
 import { AuthStore } from "@/stores/modules/auth";
 import { initDynamicRouter } from "@/routers/modules/dynamicRouter";
 import { staticRouter, errorRouter } from "@/routers/modules/staticRouter";
@@ -31,12 +30,17 @@ const router = createRouter({
  * @description 路由拦截 beforeEach
  * */
 router.beforeEach(async (to, from, next) => {
-	const globalStore = GlobalStore();
 	NProgress.start();
 	const title = import.meta.env.VITE_GLOB_APP_TITLE;
 	document.title = to.meta.title ? `${to.meta.title} - ${title}` : title;
-
-	initDynamicRouter()
+	const authStore = AuthStore();
+	authStore.setRouteName(to.name);
+	if (!authStore.authMenuListGet.length) {
+		console.log('我是数据---',authStore.authMenuListGet);
+		// await authStore.getAuthMenuList();
+		await initDynamicRouter();
+		return next({ ...to, replace: true });
+	}
 	next();
 });
 

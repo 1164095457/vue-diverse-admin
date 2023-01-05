@@ -28,7 +28,6 @@ import { ref } from "vue";
 import { GlobalStore } from "@/stores";
 import { LOGIN_URL } from "@/config/config";
 import { resetRouter } from "@/routers/index";
-// import { logoutApi } from "@/api/modules/login";
 import { useRouter } from "vue-router";
 import { ElMessageBox, ElMessage } from "element-plus";
 import InfoDialog from "./InfoDialog.vue";

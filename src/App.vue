@@ -12,7 +12,6 @@ import { getBrowserLang } from "@/utils/util";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
 import en from "element-plus/es/locale/lang/en";
 import router from "@/routers/index";
-
 // 使用主题
 useTheme();
 
@@ -31,8 +30,4 @@ const i18nLocale = computed(() => {
 
 // 配置全局组件大小 (small/default(medium)/large)
 const assemblySize = computed(() => globalStore.assemblySize);
-
-// setInterval(() => {
-// 	console.log(router.options.routes);
-// }, 2000);
 </script>

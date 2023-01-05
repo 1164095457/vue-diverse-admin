@@ -62,7 +62,6 @@ const tabsDrop = () => {
 const initTabs = () => {
 	authStore.flatMenuListGet.forEach(item => {
 		if (item.meta.isAffix && !item.meta.isHide && !item.meta.isFull) {
-			console.log(item.meta.title,item.meta.isAffix);
 			const tabsParams = {
 				icon: item.meta.icon,
 				title: item.meta.title,

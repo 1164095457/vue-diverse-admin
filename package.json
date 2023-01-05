@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.0.6",
 	"description": "vue-diverse-admin后台管理系统",
-	"author": "SpicyBoy <1164095457@qq.com>",
+	"author": "<1164095457@qq.com>",
 	"scripts": {
 		"dev": "vite",
 		"serve": "vite",

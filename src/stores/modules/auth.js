@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import { getFlatArr } from "@/utils/util";
 // import { getAuthButtonListApi, getAuthMenuListApi } from "@/api/modules/login";
 import { getShowMenuList, getAllBreadcrumbList } from "@/utils/util";
-import DynamicRouter from "@/assets/json/dynamicRouter.json";
+import DynamicRouter from "@/assets/json/routerList.json";
 
 // AuthStore
 export const AuthStore = defineStore({
@@ -13,7 +13,7 @@ export const AuthStore = defineStore({
 		// 按钮权限列表
 		authButtonList: {},
 		// 菜单权限列表
-		authMenuList: DynamicRouter.data
+		authMenuList:[]
 	}),
 	getters: {
 		// 按钮权限列表
