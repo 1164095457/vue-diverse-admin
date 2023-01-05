@@ -1,0 +1,38 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"useDefineForClassFields": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		// element 类型提示
+		// "types": ["element-plus/global"],
+
+		/* Strict Type-Checking Options */
+		"strict": true /* Enable all strict type-checking options. */,
+		// "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
+		// "strictNullChecks": true,              /* Enable strict null checks. */
+		// "strictFunctionTypes": true,           /* Enable strict checking of function types. */
+		// "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
+		// "strictPropertyInitialization": true,  /* Enable strict checking of property initialization in classes. */
+		// "noImplicitThis": true,                /* Raise error on 'this' expressions with an implied 'any' type. */
+		// "alwaysStrict": true,                  /* Parse in strict mode and emit "use strict" for each source file. */
+
+		"jsx": "preserve",
+		"sourceMap": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		// 跳过第三方库检查，解决打包失败
+		"skipLibCheck": true,
+		"lib": ["esnext", "dom"],
+		// 解析非相对模块名的基准目录
+		"baseUrl": "./",
+		// 模块名到基于 baseUrl 的路径映射的列表。
+		"paths": {
+			"@": ["src"],
+			"@/*": ["src/*"]
+		}
+	},
+	"include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "vite.config.ts", "src/routers/modules/staticRouter.js", "src/routers/modules/dynamicRouter.js", "src/main.js", "src/api/modules/upload.js", "src/api/modules/login.js", "src/api/helper/checkStatus.js", "src/api/helper/axiosCancel.js", "src/api/config/servicePort.js", "src/config/serviceLoading.js", "src/config/piniaPersist.s", "src/config/nprogress.js", "src/enums/httpEnum.js", "src/hooks/useAuthButtons.js", "src/hooks/useDownload.js", "src/hooks/useEcharts.js", "src/hooks/useHandleData.js", "src/hooks/useOnline.js", "src/hooks/useSelection.js", "src/hooks/useTable.js", "src/hooks/useTheme.js", "src/hooks/useTime.js", "src/utils/svg.js", "src/utils/serviceDict.js", "src/utils/mittBus.js", "src/utils/theme/tool.js", "src/utils/is/index.js", "src/utils/getEnv.js", "src/utils/errorHandler.js", "src/utils/eleValidate.js", "src/stores/modules/auth.js", "src/stores/modules/keepAlive.js", "src/stores/modules/tabs.js", "src/stores/index.js", "src/utils/util.js"],
+	"exclude": ["node_modules", "dist", "**/*.js"]
+}
