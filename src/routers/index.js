@@ -36,8 +36,6 @@ router.beforeEach(async (to, from, next) => {
 	const authStore = AuthStore();
 	authStore.setRouteName(to.name);
 	if (!authStore.authMenuListGet.length) {
-		console.log('我是数据---',authStore.authMenuListGet);
-		// await authStore.getAuthMenuList();
 		await initDynamicRouter();
 		return next({ ...to, replace: true });
 	}

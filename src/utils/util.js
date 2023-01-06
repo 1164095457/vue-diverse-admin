@@ -1,7 +1,6 @@
 /**
  * @description 获取localStorage
  * @param {String} key Storage名称
- * @return string
  */
 export function localGet(key) {
 	const value = window.localStorage.getItem(key);
@@ -16,7 +15,6 @@ export function localGet(key) {
  * @description 存储localStorage
  * @param {String} key Storage名称
  * @param {Any} value Storage值
- * @return void
  */
 export function localSet(key, value) {
 	window.localStorage.setItem(key, JSON.stringify(value));
@@ -25,7 +23,6 @@ export function localSet(key, value) {
 /**
  * @description 清除localStorage
  * @param {String} key Storage名称
- * @return void
  */
 export function localRemove(key) {
 	window.localStorage.removeItem(key);
@@ -33,7 +30,6 @@ export function localRemove(key) {
 
 /**
  * @description 清除所有localStorage
- * @return void
  */
 export function localClear() {
 	window.localStorage.clear();
@@ -42,7 +38,6 @@ export function localClear() {
 /**
  * @description 判断数据类型
  * @param {Any} val 需要判断类型的数据
- * @return string
  */
 export function isType(val) {
 	if (val === null) return "null";
@@ -52,7 +47,6 @@ export function isType(val) {
 
 /**
  * @description 获取当前时间对应的提示语
- * @return string
  */
 export function getTimeState() {
 	// 获取当前时间
@@ -69,7 +63,6 @@ export function getTimeState() {
 
 /**
  * @description 获取浏览器默认语言
- * @return string
  */
 export function getBrowserLang() {
 	let browserLang = navigator.language ? navigator.language : navigator.browserLanguage;
@@ -86,7 +79,6 @@ export function getBrowserLang() {
 /**
  * @description 扁平化数组对象(主要用来处理路由菜单)
  * @param {Array} menuList 所有菜单列表
- * @return array
  */
 export function getFlatArr(menuList) {
 	let newMenuList = JSON.parse(JSON.stringify(menuList));
@@ -101,7 +93,6 @@ export function getFlatArr(menuList) {
 /**
  * @description 使用递归，过滤出需要渲染在左侧菜单的列表（剔除 isHide == true 的菜单）
  * @param {Array} menuList 所有菜单列表
- * @return array
  * */
 export function getShowMenuList(menuList) {
 	let newMenuList = JSON.parse(JSON.stringify(menuList));
@@ -116,7 +107,6 @@ export function getShowMenuList(menuList) {
  * @param {Array} menuList 所有菜单列表
  * @param {Object} result 输出的结果
  * @param {String} path 当前递归的路径
- * @returns object
  */
 export const getAllBreadcrumbList = (menuList, result = {key:''}, path = []) => {
 	for (const item of menuList) {
