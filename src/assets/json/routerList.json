@@ -68,6 +68,19 @@
 						"isAffix": false,
 						"isKeepAlive": true
 					}
+				},
+				{
+					"path": "/assembly/count",
+					"name": "count",
+					"component": "/assembly/count",
+					"meta": {
+						"title": "数字滚动",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
 				}
 			]
 		},
