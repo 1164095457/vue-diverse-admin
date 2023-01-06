@@ -21,9 +21,12 @@ import pinia from "@/stores/index";
 import "virtual:svg-icons-register";
 // 全局错误提示
 import errorHandler from "@/utils/errorHandler";
+//  自定义指令
+import directives from "@/directives/index";
+
 
 const app = createApp(App);
 
 app.config.errorHandler = errorHandler;
 
-app.use(router).use(I18n).use(pinia).use(elementIcon).mount("#app");
+app.use(router).use(I18n).use(pinia).use(elementIcon).use(directives).mount("#app");

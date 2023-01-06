@@ -98,6 +98,74 @@
 			]
 		},
 		{
+			"path": "/directives",
+			"name": "directives",
+			"redirect": "/directives/copy",
+			"meta": {
+				"icon": "Briefcase",
+				"title": "自定义指令",
+				"isLink": "",
+				"isHide": false,
+				"isFull": false,
+				"isAffix": false,
+				"isKeepAlive": true
+			},
+			"children": [
+				{
+					"path": "/directives/copy",
+					"name": "copy",
+					"component": "/directives/copy",
+					"meta": {
+						"title": "复制",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
+				},
+				{
+					"path": "/directives/watermark",
+					"name": "watermark",
+					"component": "/directives/watermark",
+					"meta": {
+						"title": "水印",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
+				},
+				{
+					"path": "/directives/debounce",
+					"name": "debounce",
+					"component": "/directives/debounce",
+					"meta": {
+						"title": "防抖",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
+				},
+				{
+					"path": "/directives/throttle",
+					"name": "throttle",
+					"component": "/directives/throttle",
+					"meta": {
+						"title": "节流",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
+				}
+			]
+		},
+		{
 			"path": "/language/index",
 			"name": "language",
 			"component": "/language/index",
