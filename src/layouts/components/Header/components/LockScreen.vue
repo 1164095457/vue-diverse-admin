@@ -1,8 +1,5 @@
 <template>
-<img src="@/assets/images/suotou.svg" @click="handleLockScreen"  style="width:25px"/>
-  <!-- <el-icon @click="handleLockScreen" class="fullScreen">
-    <component :is="'Lock'"></component>
-  </el-icon> -->
+<img src="@/assets/svg/suotou.svg" @click="handleLockScreen"  style="width:25x;height:25px;cursor: pointer;" />
 </template>
 <script setup>
 import { onMounted } from 'vue'
@@ -35,8 +32,3 @@ onMounted(() =>{
     }
 })
 </script>
-<style scoped>
-.fullScreen{
-  cursor: pointer;
-}
-</style>

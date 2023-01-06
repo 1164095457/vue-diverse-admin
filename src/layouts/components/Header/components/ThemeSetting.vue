@@ -1,7 +1,5 @@
 <template>
-	<div class="theme-setting">
-		<i :class="'iconfont icon-zhuti'" class="toolBar-icon" @click="openDrawer"></i>
-	</div>
+	<img src="@/assets/svg/pifu.svg"  @click="openDrawer" style="width:20x;height:20px;cursor: pointer;" />
 </template>
 
 <script setup>

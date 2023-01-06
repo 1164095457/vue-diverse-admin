@@ -1,6 +1,6 @@
 <template>
 	<div class="layout-search-dialog">
-		<i @click="handleOpen" :class="'iconfont icon-sousuo'" class="toolBar-icon"></i>
+		<img src="@/assets/svg/sosuo.svg" @click="handleOpen" style="width:20x;height:20px;cursor: pointer;" class="toolBar-icon" />
 		<el-dialog
 			v-model="isShowSearch"
 			width="300px"

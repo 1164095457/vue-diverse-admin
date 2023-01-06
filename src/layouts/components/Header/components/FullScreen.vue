@@ -1,12 +1,15 @@
 <template>
-    <el-icon @click="goToFullScreen" class="fullScreen">
-        <component :is="'FullScreen'"></component>
-    </el-icon>
+	<img v-if="isIcon" src="@/assets/svg/quanping.svg" @click="goToFullScreen" style="width:25x;height:25px;cursor: pointer;"/>
+	<img v-else src="@/assets/svg/quxiaoquanping.svg" @click="goToFullScreen" style="width:25x;height:25px;cursor: pointer;"/>
 </template>
 <script setup>
+import { ref } from 'vue'
+const isIcon = ref(true)
+
 //	全屏
 const goToFullScreen = () => {
   const element = document.getElementById("app");
+  isIcon.value = !isIcon.value
   if (element.requestFullscreen) {
     element.requestFullscreen();
   } else if (element.mozRequestFullScreen) {

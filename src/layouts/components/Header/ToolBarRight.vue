@@ -31,7 +31,7 @@ import Avatar from "./components/Avatar.vue";
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: 120px;
+		width: 140px;
 		margin-right: 22px;
 	}
 	.username {
