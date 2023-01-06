@@ -62,6 +62,42 @@ export function getTimeState() {
 }
 
 /**
+ * @description 获取当前时间
+ */
+export function getTime(type) {
+	var myDate = new Date();
+	var myYear = myDate.getFullYear(); 
+	var myMonth = myDate.getMonth() + 1; 
+	var myToday = myDate.getDate(); 
+	var myDay = myDate.getDay(); 
+	var myHour = myDate.getHours(); 
+	var myMinute = myDate.getMinutes();
+	var mySecond = myDate.getSeconds();
+	var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+	var nowTime;
+		if(type === 1){
+		  nowTime = myYear + '年' + fillZero(myMonth) + '月' + fillZero(myToday) + '日';
+		}else if(type === 2){
+		  nowTime = fillZero(myHour) + ':' + fillZero(myMinute) + ':' + fillZero(mySecond);
+		} else if(type === 3){
+		  nowTime = week[myDay]
+		}else{
+		  nowTime = myYear + '年' + fillZero(myMonth) + '月' + fillZero(myToday) + '日' + ' ' + week[myDay] + ' ' + fillZero(myHour) + ':' +
+		  fillZero(myMinute) + ':' + fillZero(mySecond) + ' ' + '';
+		}
+		function fillZero(str) {
+		  var realNum;
+		  if (str < 10) {
+			  realNum = '0' + str;
+		  } else {
+			  realNum = str;
+		  }
+		  return realNum;
+	  }
+	return nowTime
+  };
+
+/**
  * @description 获取浏览器默认语言
  */
 export function getBrowserLang() {
