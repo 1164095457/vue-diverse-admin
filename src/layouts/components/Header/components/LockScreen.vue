@@ -1,5 +1,5 @@
 <template>
-<img src="@/assets/images/suotou.svg" style="width:25px"/>
+<img src="@/assets/images/suotou.svg" @click="handleLockScreen"  style="width:25px"/>
   <!-- <el-icon @click="handleLockScreen" class="fullScreen">
     <component :is="'Lock'"></component>
   </el-icon> -->

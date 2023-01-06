@@ -2,6 +2,7 @@
 	<div class="tool-bar-ri">
 		<div class="header-icon">
 			<LockScreen />
+			<FullScreen />
 			<Language id="language" />
 			<SearchMenu id="searchMenu" />
 			<ThemeSetting id="themeSetting" />
@@ -16,6 +17,7 @@ import SearchMenu from "./components/SearchMenu.vue";
 import Language from "./components/Language.vue";
 import ThemeSetting from "./components/ThemeSetting.vue";
 import LockScreen from "./components/LockScreen.vue";
+import FullScreen from "./components/FullScreen.vue";
 import Avatar from "./components/Avatar.vue";
 </script>
 
