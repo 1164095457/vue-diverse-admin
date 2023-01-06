@@ -65,18 +65,6 @@
 			<span>主题颜色</span>
 			<el-color-picker v-model="themeConfig.primary" :predefine="colorList" @change="changePrimary" />
 		</div>
-		<div class="theme-item">
-			<span>暗黑模式</span>
-			<SwitchDark></SwitchDark>
-		</div>
-		<div class="theme-item">
-			<span>灰色模式</span>
-			<el-switch v-model="themeConfig.isGrey" @change="changeGreyOrWeak($event, 'grey')" />
-		</div>
-		<div class="theme-item">
-			<span>色弱模式</span>
-			<el-switch v-model="themeConfig.isWeak" @change="changeGreyOrWeak($event, 'weak')" />
-		</div>
 		<br />
 
 		<!-- 界面设置 -->

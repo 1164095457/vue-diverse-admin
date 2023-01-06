@@ -45,26 +45,13 @@ export const useTheme = () => {
 		}
 	};
 
-	// 灰色和弱色切换
-	const changeGreyOrWeak = (value, type) => {
-		const body = document.body;
-		if (!value) return body.setAttribute("style", "");
-		if (type === "grey") body.setAttribute("style", "filter: grayscale(1)");
-		if (type === "weak") body.setAttribute("style", "filter: invert(80%)");
-		let propName = type == "grey" ? "isWeak" : "isGrey";
-		globalStore.setThemeConfig({ ...themeConfig.value, [propName]: false });
-	};
-
 	onBeforeMount(() => {
 		switchDark();
 		changePrimary(themeConfig.value.primary);
-		if (themeConfig.value.isGrey) changeGreyOrWeak(true, "grey");
-		if (themeConfig.value.isWeak) changeGreyOrWeak(true, "weak");
 	});
 
 	return {
 		switchDark,
 		changePrimary,
-		changeGreyOrWeak
 	};
 };
