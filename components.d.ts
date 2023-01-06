@@ -44,6 +44,7 @@ declare module 'vue' {
     Message: typeof import('./src/components/Message/src/Message.vue')['default']
     MessageBox: typeof import('./src/components/MessageBox/src/MessageBox.vue')['default']
     SwitchDark: typeof import('./src/components/SwitchDark/index.vue')['default']
+    WangEditor: typeof import('./src/components/WangEditor/index.vue')['default']
   }
 }
 
