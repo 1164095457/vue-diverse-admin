@@ -1,5 +1,5 @@
-import types from './types';
-import MessageComponent from './Message'
+import types from './src/types';
+import MessageComponent from './src/Message.vue'
 import { createApp,ref, watch } from 'vue'
 
 const Message = (options) =>{

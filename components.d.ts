@@ -41,7 +41,7 @@ declare module 'vue' {
     ElTag: typeof import('element-plus/es')['ElTag']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     Loading: typeof import('./src/components/Loading/index.vue')['default']
-    Message: typeof import('./src/components/Message/Message.vue')['default']
+    Message: typeof import('./src/components/Message/src/Message.vue')['default']
     MessageBox: typeof import('./src/components/MessageBox/src/MessageBox.vue')['default']
     SwitchDark: typeof import('./src/components/SwitchDark/index.vue')['default']
   }

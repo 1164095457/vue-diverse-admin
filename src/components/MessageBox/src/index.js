@@ -1,4 +1,4 @@
-import MessageBoxComponent from './MessageBox'
+import MessageBoxComponent from './MessageBox.vue'
 import { createApp, watch } from 'vue'
 export const fields = ['confirm','prompt']
 const MessageBox = (options) =>{

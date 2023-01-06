@@ -134,10 +134,6 @@ defineExpose({
             width: 16px;
             height: 16px;
             cursor:pointer;
-            &:hover{
-                transform: rotate(90deg);
-                transition: .5s all;
-            }
         }
     }
     @keyframes identifier {

@@ -16,12 +16,12 @@
 			}
 		},
 		{
-			"path": "/test/index",
-			"name": "test",
-			"component": "/test/index",
+			"path": "/panel",
+			"name": "panel",
+			"component": "/panel/index",
 			"meta": {
 				"icon": "MessageBox",
-				"title": "测试",
+				"title": "面板",
 				"isLink": "",
 				"isHide": false,
 				"isFull": false,
@@ -30,18 +30,33 @@
 			}
 		},
 		{
-			"path": "/about/index",
-			"name": "about",
-			"component": "/about/index",
+			"path": "/assembly",
+			"name": "assembly",
+			"redirect": "/assembly/message",
 			"meta": {
-				"icon": "MessageBox",
-				"title": "我的",
+				"icon": "Briefcase",
+				"title": "常用组件",
 				"isLink": "",
 				"isHide": false,
 				"isFull": false,
 				"isAffix": false,
 				"isKeepAlive": true
-			}
+			},
+			"children": [
+				{
+					"path": "/assembly/message",
+					"name": "message",
+					"component": "/assembly/message",
+					"meta": {
+						"title": "消息框",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
+				}
+			]
 		},
 		{
 			"path": "/language/index",
