@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <el-row :gutter="10">
-      <el-col :xs="24" :sm="24" :md="6" :lg="6" >
+      <el-col :xs="24" :sm="24" :md="12" :lg="12" >
         <HomeUser />
       </el-col>
       <el-col :xs="24" :sm="24" :md="6" :lg="6" >
@@ -12,12 +12,15 @@
         <HomeCount :list="countList[2]" />
         <HomeCount :list="countList[3]" />
       </el-col>
-      <el-col :xs="24" :sm="24" :md="6" :lg="6" >
-        <HomePie />
+      <el-col :xs="24" :sm="24" :md="8 " :lg="8" >
+        <HomeTable />
       </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="24" >
+      <el-col :xs="24" :sm="24" :md="16 " :lg="16" >
         <HomeLine />
       </el-col>
+      <!-- <el-col :xs="24" :sm="24" :md="24" :lg="24" >
+        <HomeLine />
+      </el-col> -->
     </el-row>
   </div>
 </template>
@@ -26,7 +29,8 @@
 import HomeUser from './components/HomeUser.vue'
 import HomeCount from './components/HomeCount.vue'
 import HomeLine from './components/HomeLine.vue'
-import HomePie from './components/HomePie.vue'
+import HomeTable from './components/HomeTable.vue'
+// import HomePie from './components/HomePie.vue'
 
 
 const countList = [

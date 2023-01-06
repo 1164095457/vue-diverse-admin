@@ -8,15 +8,23 @@
         class="image"
         src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F14216793838%2F1000.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1663220582&t=16bb878645d4db0f55c89b68f608463d" alt="">
         <div class="info">
-            <div class="name">修勾</div>
-            <div class="introduce">大家好，我是练习时长两年半的修勾</div>
+            <div class="name">User</div>
+            <div class="introduce">
+            <el-link type="primary">vue-diverse-admin</el-link>
+            由vue3 + vite + element-plus + ts搭建，支持ts、js混用。自定义主题颜色。界面设置配置。支持4种Layouts布局切换。i18n等...</div>
+            <div class="introduce">
+                git地址：<el-link :href="url" target="_blank" type="danger">{{url}}</el-link>
+            </div>
             <el-tag>前端韭菜</el-tag>
-            <div style="margin-top:36px;">
+            <div style="margin-top:24px;">
                 <el-button type="primary">前往个人中心</el-button>
             </div>
         </div>
     </div>
 </template>
+<script setup>
+const url = 'https://github.com/1164095457/vue-diverse-admin'
+</script>
 <style lang="scss" scoped>
     .user{
         background: #fff;
