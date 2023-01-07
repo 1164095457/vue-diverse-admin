@@ -1,14 +1,14 @@
 <template>
 	<el-form ref="loginFormRef" :model="loginForm" :rules="loginRules" size="large">
 		<el-form-item prop="username">
-			<el-input v-model="loginForm.username" placeholder="用户名：admin / user">
+			<el-input v-model="loginForm.username" placeholder="用户名：随便填">
 				<template #prefix>
 					<el-icon class="el-input__icon"><user /></el-icon>
 				</template>
 			</el-input>
 		</el-form-item>
 		<el-form-item prop="password">
-			<el-input type="password" v-model="loginForm.password" placeholder="密码：123456" show-password autocomplete="new-password">
+			<el-input type="password" v-model="loginForm.password" placeholder="密码：随便填" show-password autocomplete="new-password">
 				<template #prefix>
 					<el-icon class="el-input__icon"><lock /></el-icon>
 				</template>
@@ -16,10 +16,10 @@
 		</el-form-item>
 	</el-form>
 	<div class="login-btn">
-		<el-button :icon="CircleClose" round @click="resetForm(loginFormRef)" size="large">重置</el-button>
-		<el-button :icon="UserFilled" round @click="login(loginFormRef)" size="large" type="primary" :loading="loading">
+		<el-button @click="login(loginFormRef)" size="large" type="primary" :loading="loading">
 			登录
 		</el-button>
+		<el-button @click="resetForm(loginFormRef)" size="large">重置</el-button>
 	</div>
 </template>
 
@@ -30,6 +30,7 @@ import { ElNotification } from "element-plus";
 import { GlobalStore } from "@/stores";
 import { TabsStore } from "@/stores/modules/tabs";
 import { CircleClose, UserFilled } from "@element-plus/icons-vue";
+import { HOME_URL } from "@/config/config";
 
 const router = useRouter();
 const tabsStore = TabsStore();
@@ -43,9 +44,24 @@ const loginRules = reactive({
 });
 
 const loading = ref(false);
-const loginForm = reactive({ username: "admin", password: "123456" });
+const loginForm = reactive({ username: "", password: "" });
 const login = (formEl) => {
-
+	if (!formEl) return;
+	formEl.validate(async valid => {
+		if (!valid) return;
+		loading.value = true;
+		try {
+			router.push(HOME_URL);
+			ElNotification({
+				title: getTimeState(),
+				message: "欢迎登录 vue-diverse-admin",
+				type: "success",
+				duration: 3000
+			});
+		} finally {
+			loading.value = false;
+		}
+	});
 };
 
 // resetForm
@@ -58,5 +74,4 @@ const resetForm = (formEl) => {
 </script>
 
 <style scoped lang="scss">
-@import "../index.scss";
 </style>
