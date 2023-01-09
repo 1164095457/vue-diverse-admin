@@ -2,24 +2,36 @@ import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
 
-export function isDevFn(mode) {
+declare type Recordable<T = any> = Record<string, T>;
+interface ViteEnv {
+	VITE_API_URL: string;
+	VITE_PORT: number;
+	VITE_OPEN: boolean;
+	VITE_GLOB_APP_TITLE: string;
+	VITE_DROP_CONSOLE: boolean;
+	VITE_PROXY_URL: string;
+	VITE_BUILD_GZIP: boolean;
+	VITE_REPORT: boolean;
+}
+
+export function isDevFn(mode: string): boolean {
 	return mode === "development";
 }
 
-export function isProdFn(mode) {
+export function isProdFn(mode: string): boolean {
 	return mode === "production";
 }
 
 /**
  * Whether to generate package preview
  */
-export function isReportMode() {
+export function isReportMode(): boolean {
 	return process.env.VITE_REPORT === "true";
 }
 
 // Read all environment variable configuration files to process.env
-export function wrapperEnv(envConf) {
-	const ret = {};
+export function wrapperEnv(envConf: Recordable): ViteEnv {
+	const ret: any = {};
 
 	for (const envName of Object.keys(envConf)) {
 		let realName = envConf[envName].replace(/\\n/g, "\n");
@@ -68,6 +80,6 @@ export function getEnvConfig(match = "VITE_GLOB_", confFiles = [".env", ".env.pr
  * Get user root directory
  * @param dir file path
  */
-export function getRootPath(...dir) {
+export function getRootPath(...dir: string[]) {
 	return path.resolve(process.cwd(), ...dir);
 }
