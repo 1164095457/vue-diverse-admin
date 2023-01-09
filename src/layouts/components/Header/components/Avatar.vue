@@ -38,21 +38,9 @@ const globalStore = GlobalStore();
 
 // 退出登录
 const logout = () => {
-	ElMessageBox.confirm("您是否确认退出登录?", "温馨提示", {
-		confirmButtonText: "确定",
-		cancelButtonText: "取消",
-		type: "warning"
-	}).then(async () => {
-		// 1.调用退出登录接口
-		// await logoutApi();
-		// 2.清除 Token
-		globalStore.setToken("");
-		// 3.重置路由
-		resetRouter();
-		// 4.重定向到登陆页
-		router.replace(LOGIN_URL);
-		ElMessage.success("退出登录成功！");
-	});
+	localStorage.clear()
+	resetRouter();
+	router.replace(LOGIN_URL);
 };
 
 const infoRef = ref(null);
