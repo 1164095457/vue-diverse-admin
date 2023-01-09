@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import { getFlatArr } from "@/utils/util";
 // import { getAuthButtonListApi, getAuthMenuListApi } from "@/api/modules/login";
 import { getShowMenuList, getAllBreadcrumbList } from "@/utils/util";
-import DynamicRouter from "@/assets/json/routerList.json";
+import { routerList } from '@/api/login.js'
 
 // AuthStore
 export const AuthStore = defineStore({
@@ -34,9 +34,9 @@ export const AuthStore = defineStore({
 			this.authButtonList = data;
 		},
 		// getAuthMenuList
-		getAuthMenuList() {
-			// const { data } = await getAuthMenuListApi();
-			this.authMenuList = DynamicRouter.data;
+		async getAuthMenuList() {
+			const {data} = await routerList();
+			this.authMenuList = data.list;
 		},
 		// setRouteName
 		async setRouteName(name) {

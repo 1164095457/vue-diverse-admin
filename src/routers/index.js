@@ -1,8 +1,11 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import { AuthStore } from "@/stores/modules/auth";
+import { GlobalStore } from "@/stores";
 import { initDynamicRouter } from "@/routers/modules/dynamicRouter";
 import { staticRouter, errorRouter } from "@/routers/modules/staticRouter";
 import NProgress from "@/config/nprogress";
+import { LOGIN_URL } from "@/config/config";
+
 
 /**
  * @description 动态路由参数配置简介
@@ -30,9 +33,17 @@ const router = createRouter({
  * @description 路由拦截 beforeEach
  * */
 router.beforeEach(async (to, from, next) => {
+	const globalStore = GlobalStore();
 	NProgress.start();
+
 	const title = import.meta.env.VITE_GLOB_APP_TITLE;
 	document.title = to.meta.title ? `${to.meta.title} - ${title}` : title;
+
+	if (to.path === LOGIN_URL) {
+		if (!globalStore.token) return next();
+		else return next(LOGIN_URL);
+	}
+	if (!globalStore.token) return next(LOGIN_URL);
 	const authStore = AuthStore();
 	authStore.setRouteName(to.name);
 	if (!authStore.authMenuListGet.length) {

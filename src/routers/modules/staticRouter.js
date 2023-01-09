@@ -22,20 +22,7 @@ export const staticRouter = [
 		name: "layout",
 		component: () => import("@/layouts/index.vue"),
 		redirect: HOME_URL,
-		children: [
-			// {
-			// 	component: () => import("@/views/home/index.vue"),
-			// 	meta: {icon: "HomeFilled", title: "首页", isLink: "", isHide: false, isFull: false, isAffix: true},
-			// 	name: "home",
-			// 	path: "/home/index"
-			// },
-			// {
-			// 	component: () => import("@/views/test/index.vue"),
-			// 	meta: {icon: "HomeFilled", title: "测试", isHide: false, isFull: false, isAffix: false,isKeepAlive:true},
-			// 	name: "test",
-			// 	path: "/test/index"
-			// },
-		]
+		children: []
 	}
 ];
 

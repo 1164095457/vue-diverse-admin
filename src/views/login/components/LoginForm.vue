@@ -31,6 +31,7 @@ import { GlobalStore } from "@/stores";
 import { TabsStore } from "@/stores/modules/tabs";
 import { CircleClose, UserFilled } from "@element-plus/icons-vue";
 import { HOME_URL } from "@/config/config";
+import { pageLogin } from '@/api/login' 
 
 const router = useRouter();
 const tabsStore = TabsStore();
@@ -51,9 +52,11 @@ const login = (formEl) => {
 		if (!valid) return;
 		loading.value = true;
 		try {
+			const { data } = await pageLogin()
+			globalStore.setToken(data.token);
 			router.push(HOME_URL);
 			ElNotification({
-				title: getTimeState(),
+				title: data.name,
 				message: "欢迎登录 vue-diverse-admin",
 				type: "success",
 				duration: 3000
