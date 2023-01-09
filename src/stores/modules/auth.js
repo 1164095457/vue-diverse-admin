@@ -41,6 +41,6 @@ export const AuthStore = defineStore({
 		// setRouteName
 		async setRouteName(name) {
 			this.routeName = name;
-		}
+		},
 	}
 });

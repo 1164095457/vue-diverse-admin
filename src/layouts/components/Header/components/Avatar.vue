@@ -32,14 +32,17 @@ import { useRouter } from "vue-router";
 import { ElMessageBox, ElMessage } from "element-plus";
 import InfoDialog from "./InfoDialog.vue";
 import PasswordDialog from "./PasswordDialog.vue";
+import { AuthStore } from "@/stores/modules/auth";
 
 const router = useRouter();
 const globalStore = GlobalStore();
+const authStore = AuthStore();
 
 // 退出登录
 const logout = () => {
-	localStorage.clear()
-	resetRouter();
+	globalStore.setToken("");
+	authStore.authMenuList = []
+	resetRouter()
 	router.replace(LOGIN_URL);
 };
 

@@ -41,9 +41,12 @@ router.beforeEach(async (to, from, next) => {
 
 	if (to.path === LOGIN_URL) {
 		if (!globalStore.token) return next();
-		else return next(LOGIN_URL);
+		else return next(from.fullPath);
 	}
+
+	console.log(globalStore.token);
 	if (!globalStore.token) return next(LOGIN_URL);
+
 	const authStore = AuthStore();
 	authStore.setRouteName(to.name);
 	if (!authStore.authMenuListGet.length) {
@@ -60,7 +63,7 @@ export const resetRouter = () => {
 	const authStore = AuthStore();
 	authStore.flatMenuListGet.forEach(route => {
 		const { name } = route;
-		if (name && router.hasRoute(name)) router.removeRoute(name);
+		router.removeRoute(name);
 	});
 };
 

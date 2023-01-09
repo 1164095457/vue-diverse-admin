@@ -54,6 +54,8 @@ const login = (formEl) => {
 		try {
 			const { data } = await pageLogin()
 			globalStore.setToken(data.token);
+			tabsStore.closeMultipleTab();
+
 			router.push(HOME_URL);
 			ElNotification({
 				title: data.name,
