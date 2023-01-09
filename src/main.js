@@ -20,6 +20,7 @@ import errorHandler from "@/utils/errorHandler";
 //  自定义指令
 import directives from "@/directives/index";
 
+import './mock/index'
 
 const app = createApp(App);
 
