@@ -1,8 +1,5 @@
 # Vue3 + Vite3 + Element-Plus 管理系统
 
-![banner](https://iamge-1259297738.cos.ap-chengdu.myqcloud.com/md/banner.png)
-
-
 ### 前言 📖
 
 - vue-diverse-admin，基于 Vue3、TypeScript、Vite3、Pinia、Element-Plus 开源的一套后台管理模板，项目均使用JS开发，但已经配置TS，可以JS、TS混用。目前功能还在持续更新中...您也可以删除其他直接使用Layout布局进行二次开发
