@@ -23,7 +23,7 @@
 
 ### 三、安装使用步骤 📔
 
-- **Clone：**
+- **克隆：**
 
 ```text
 # Gitee
@@ -32,7 +32,7 @@ git clone https://gitee.com/lin_zi_quan/vue-diverse-admin.git
 git clone https://github.com/1164095457/vue-diverse-admin.git
 ```
 
-- **Install：**
+- **安装依赖：**
 
 ```text
 # 建议使用nodejs 16+
@@ -41,14 +41,14 @@ npm install
 
 ```
 
-- **Run：**
+- **运行：**
 
 ```text
 npm run dev
 npm run serve
 ```
 
-- **Build：**
+- **打包：**
 
 ```text
 # 开发环境
@@ -61,7 +61,7 @@ npm run build:test
 npm run build:pro
 ```
 
-- **Lint：**
+- **检测：**
 
 ```text
 # eslint 检测代码
@@ -83,7 +83,7 @@ npm run commit
 
 ### 四、项目截图 📷
 
-![banner]('http://rnkzbnvrd.hn-bkt.clouddn.com/30747d0cec5ee8bd5687c7cd8ba5c14.png')
+![banner]('./src/assets/md/30747d0cec5ee8bd5687c7cd8ba5c14.png')
 ![banner]('http://rnkzbnvrd.hn-bkt.clouddn.com/a0d570f7e968fca075a91ea8a84b2de.png')
 
 ### 五、文件资源目录 📚
