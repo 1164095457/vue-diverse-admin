@@ -35,11 +35,9 @@ git clone https://github.com/1164095457/vue-diverse-admin.git
 - **Install：**
 
 ```text
+# 建议使用nodejs 16+
 cnpm install
 npm install
-
-
-# 依赖安装失败，请升级 nodejs 到 16+
 
 ```
 
@@ -83,7 +81,12 @@ lint:stylelint
 npm run commit
 ```
 
-### 四、文件资源目录 📚
+### 四、项目截图 📷
+
+![banner]('http://rnkzbnvrd.hn-bkt.clouddn.com/30747d0cec5ee8bd5687c7cd8ba5c14.png')
+![banner]('http://rnkzbnvrd.hn-bkt.clouddn.com/a0d570f7e968fca075a91ea8a84b2de.png')
+
+### 五、文件资源目录 📚
 
 ```text
 Geeker-Admin
@@ -130,7 +133,7 @@ Geeker-Admin
 └─ vite.config.ts         # vite 配置
 ```
 
-### 五、浏览器支持
+### 六、浏览器支持
 
 > 默认支持以下浏览器，vue3 不支持 IE 浏览器。更多浏览器可以查看 [Can I Use Es Module](https://caniuse.com/?search=ESModule)
 >
@@ -141,6 +144,6 @@ Geeker-Admin
 |                              last 2 versions                              |                                 last 2 versions                                 |                                last 2 versions                                |                                last 2 versions                                |
 
 
-### 六、微信交流群
+### 最后
 
 > 感谢第三方开源库的支撑，项目图片资源源于网络，侵权联系作者删！
