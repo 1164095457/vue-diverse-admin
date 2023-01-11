@@ -76,8 +76,9 @@ lint:stylelint
 
 ### 四、项目截图 📷
 
-![banner]('http://rnkzbnvrd.hn-bkt.clouddn.com/30747d0cec5ee8bd5687c7cd8ba5c14.png')
-![banner]('http://rnkzbnvrd.hn-bkt.clouddn.com/a0d570f7e968fca075a91ea8a84b2de.png')
+![banner](src/assets/md/30747d0cec5ee8bd5687c7cd8ba5c14.png)
+![banner](src/assets/md/dfa358ebdaa815e51cb5c8697da7c95.png)
+![banner](src/assets/md/8f3fd7d419285b46639a7dd596eb604.png)
 
 ### 五、文件资源目录 📚
 
