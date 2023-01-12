@@ -63,7 +63,7 @@
 import CountTo from "@/components/CountTo";
 import PancelLine from "./components/PancelLine.vue";
 import progressBar from "./components/progressBar.vue";
-import PancePice from "./components/PancePice.vue";
+import PancePice from "./components/PancePie.vue";
 import PancelPictorialBar from "./components/PancelPictorialBar.vue";
 const countList = [
 	{
