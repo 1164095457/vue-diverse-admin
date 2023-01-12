@@ -1,5 +1,5 @@
 <template>
-	<div ref="echartsRef" style="height: 100%; width: 100%"></div>
+	<div ref="echartsRef" class="echarts-content"></div>
 </template>
 
 <script setup>
