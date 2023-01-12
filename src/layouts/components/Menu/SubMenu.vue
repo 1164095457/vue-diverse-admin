@@ -2,7 +2,7 @@
 	<template v-for="subItem in menuList" :key="subItem.path">
 		<el-sub-menu v-if="subItem.children && subItem.children.length > 0" :index="subItem.path">
 			<template #title>
-				<el-icon>
+				<el-icon v-if="subItem.meta.icon">
 					<component :is="subItem.meta.icon"></component>
 				</el-icon>
 				<span>{{ subItem.meta.title }}</span>

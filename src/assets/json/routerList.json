@@ -115,7 +115,7 @@
 			"name": "directives",
 			"redirect": "/directives/copy",
 			"meta": {
-				"icon": "Briefcase",
+				"icon": "Pointer",
 				"title": "自定义指令",
 				"isLink": "",
 				"isHide": false,
@@ -179,11 +179,109 @@
 			]
 		},
 		{
+			"path": "/menu",
+			"name": "menu",
+			"redirect": "/menu/menu1",
+			"meta": {
+				"icon": "Menu",
+				"title": "菜单嵌套",
+				"isLink": "",
+				"isHide": false,
+				"isFull": false,
+				"isAffix": false,
+				"isKeepAlive": true
+			},
+			"children": [
+				{
+					"path": "/menu/menu1",
+					"name": "menu1",
+					"component": "/menu/menu1/index",
+					"meta": {
+						"title": "菜单1",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
+				},
+				{
+					"path": "/menu/menu2",
+					"name": "menu2",
+					"redirect": "/menu/menu2/menu21",
+					"meta": {
+						"title": "菜单2",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					},
+					"children": [
+						{
+							"path": "/menu/menu2/menu21",
+							"name": "menu21",
+							"component": "/menu/menu2/menu2-1/index",
+							"meta": {
+								"title": "菜单2-1",
+								"isLink": "",
+								"isHide": false,
+								"isFull": false,
+								"isAffix": false,
+								"isKeepAlive": true
+							}
+						},
+						{
+							"path": "/menu/menu2/menu22",
+							"name": "menu22",
+							"redirect": "/menu/menu2/menu2-2/menu2-2-1",
+							"meta": {
+								"title": "菜单2-2",
+								"isLink": "",
+								"isHide": false,
+								"isFull": false,
+								"isAffix": false,
+								"isKeepAlive": true
+							},
+							"children": [
+								{
+									"path": "/menu/menu2/menu22/menu221",
+									"name": "menu221",
+									"component": "/menu/menu2/menu2-2/menu2-2-1/index",
+									"meta": {
+										"title": "菜单2-2-1",
+										"isLink": "",
+										"isHide": false,
+										"isFull": false,
+										"isAffix": false,
+										"isKeepAlive": true
+									}
+								},
+								{
+									"path": "/menu/menu2/menu22/menu222",
+									"name": "menu222",
+									"component": "/menu/menu2/menu2-2/menu2-2-2/index",
+									"meta": {
+										"title": "菜单2-2-2",
+										"isLink": "",
+										"isHide": false,
+										"isFull": false,
+										"isAffix": false,
+										"isKeepAlive": true
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"path": "/language/index",
 			"name": "language",
 			"component": "/language/index",
 			"meta": {
-				"icon": "MessageBox",
+				"icon": "SetUp",
 				"title": "i18n多语言",
 				"isLink": "",
 				"isHide": false,
