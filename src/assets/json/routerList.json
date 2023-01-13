@@ -192,6 +192,35 @@
 			]
 		},
 		{
+			"path": "/work",
+			"name": "work",
+			"redirect": "/work/print",
+			"meta": {
+				"icon": "Printer",
+				"title": "办公",
+				"isLink": "",
+				"isHide": false,
+				"isFull": false,
+				"isAffix": false,
+				"isKeepAlive": true
+			},
+			"children": [
+				{
+					"path": "/work/print",
+					"name": "print",
+					"component": "/work/print",
+					"meta": {
+						"title": "打印",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
+				}
+			]
+		},
+		{
 			"path": "/menu",
 			"name": "menu",
 			"redirect": "/menu/menu1",
