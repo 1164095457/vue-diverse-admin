@@ -217,6 +217,19 @@
 						"isAffix": false,
 						"isKeepAlive": true
 					}
+				},
+				{
+					"path": "/work/excel",
+					"name": "excel",
+					"component": "/work/excel",
+					"meta": {
+						"title": "Excel",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
 				}
 			]
 		},
