@@ -1,5 +1,7 @@
 # Vue3 + Vite3 + Element-Plus 管理系统
 
+![banner](https://toscode.gitee.com/lin_zi_quan/vue-diverse-admin/raw/main/src/assets/md/30747d0cec5ee8bd5687c7cd8ba5c14.png)
+
 ### 介绍 📖
 
 - vue-diverse-admin，基于 Vue3、TypeScript、Vite3、Element-Plus 开源的一套后台管理模板，项目均使用JS开发，但已经配置TS，可以JS、TS混用。目前功能还在持续更新中...您也可以删除其他直接使用Layout布局进行二次开发
@@ -19,6 +21,7 @@
 - 🚀 使用 keep-alive 对个页面进行缓存（缓存路由里可配置、页面切换带动画）
 - 🚀 常用自定义指令开发（复制、水印、拖拽、节流、防抖）
 - 🚀 常用组件开发 有自行封装（全局消息、数字滚动..），第三方的库（富文本、引导页、拖拽..）
+- 🚀 常用办公工具（打印、Excel导出、关系图）
 - 🚀 支持4中Layout布局，自定义主题颜色，可配置面包屑、标签栏、页脚，锁屏，路由搜索
 - 🚀 支持 i18n 国际化（目前仅在i18n多语言页面配置，需要增加可自行配置）
 
@@ -76,7 +79,6 @@ lint:stylelint
 
 ### 四、项目截图 📷
 
-![banner](https://toscode.gitee.com/lin_zi_quan/vue-diverse-admin/raw/main/src/assets/md/30747d0cec5ee8bd5687c7cd8ba5c14.png)
 ![banner](https://toscode.gitee.com/lin_zi_quan/vue-diverse-admin/raw/main/src/assets/md/dfa358ebdaa815e51cb5c8697da7c95.png)
 ![banner](https://toscode.gitee.com/lin_zi_quan/vue-diverse-admin/raw/main/src/assets/md/8f3fd7d419285b46639a7dd596eb604.png)
 
