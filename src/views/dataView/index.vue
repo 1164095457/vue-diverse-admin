@@ -1,21 +1,21 @@
 <template>
 	<div class="dataScreen-container">
 		<div class="dataScreen" ref="dataScreenRef">
-			<div class="data-header"></div>
+			<div class="data-header">开发中</div>
 			<div class="data-main">
 				<div class="data-main-left">
-					<div class="left-item">1</div>
-					<div class="left-item">1</div>
+					<div class="left-item">开发中</div>
+					<div class="left-item">开发中</div>
 				</div>
 				<div class="data-main-right">
-					<div class="right-item">1</div>
-					<div class="right-item">1</div>
+					<div class="right-item">开发中</div>
+					<div class="right-item">开发中</div>
 				</div>
 			</div>
 			<div class="echarts-map-chian">
 				<MapChian />
 			</div>
-			<div class="data-footer"></div>
+			<div class="data-footer">开发中</div>
 		</div>
 	</div>
 </template>

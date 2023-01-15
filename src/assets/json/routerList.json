@@ -34,7 +34,7 @@
 			"name": "dataView",
 			"component": "/dataView/index",
 			"meta": {
-				"icon": "MessageBox",
+				"icon": "Monitor",
 				"title": "大屏数据",
 				"isLink": "",
 				"isHide": false,

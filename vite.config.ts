@@ -82,20 +82,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 				}),
 			// * cdn 引入（vue按需引入会导致依赖vue的插件出现问题(列如:pinia/vuex)）
 			importToCDN({
-				modules: [
-					// {
-					// 	name: "vue",
-					// 	var: "Vue",
-					// 	path: "https://unpkg.com/vue@next"
-					// },
-					// 使用cdn引入element-plus时,开发环境还是需要在main.js中引入element-plus,可以不用引入css
-					// {
-					// 	name: "element-plus",
-					// 	var: "ElementPlus",
-					// 	path: "https://unpkg.com/element-plus",
-					// 	css: "https://unpkg.com/element-plus/dist/index.css"
-					// }
-				]
+				modules: []
 			}),
 			// * demand import element
 			AutoImport({
@@ -105,21 +92,12 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 				resolvers: [ElementPlusResolver()]
 			}),
 		],
-		// * 打包去除 console.log && debugger
 		esbuild: {
 			pure: viteEnv.VITE_DROP_CONSOLE ? ["console.log", "debugger"] : []
 		},
 		build: {
 			outDir: "dist",
 			minify: "esbuild",
-			// esbuild 打包更快，但是不能去除 console.log，terser打包慢，但能去除 console.log
-			// minify: "terser",
-			// terserOptions: {
-			// 	compress: {
-			// 		drop_console: viteEnv.VITE_DROP_CONSOLE,
-			// 		drop_debugger: true
-			// 	}
-			// },
 			chunkSizeWarningLimit: 1500,
 			rollupOptions: {
 				output: {
