@@ -7,7 +7,9 @@ import {
     MapChart,
     PictorialBarChart,
     RadarChart,
-    ScatterChart
+    ScatterChart,
+    LinesChart,
+    GraphChart
 } from "echarts/charts";
  
 import {
@@ -56,7 +58,9 @@ echarts.use([
     ScatterChart,
     LabelLayout,
     UniversalTransition,
-    CanvasRenderer
+    CanvasRenderer,
+    LinesChart,
+    GraphChart
 ]);
  
 // 导出

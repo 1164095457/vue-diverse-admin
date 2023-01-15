@@ -16,6 +16,20 @@
 			}
 		},
 		{
+			"path": "/dataView",
+			"name": "dataView",
+			"component": "/dataView/index",
+			"meta": {
+				"icon": "MessageBox",
+				"title": "大屏数据",
+				"isLink": "",
+				"isHide": false,
+				"isFull": true,
+				"isAffix": false,
+				"isKeepAlive": true
+			}
+		},
+		{
 			"path": "/panel",
 			"name": "panel",
 			"component": "/panel/index",
@@ -224,6 +238,19 @@
 					"component": "/work/excel",
 					"meta": {
 						"title": "Excel",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
+				},
+				{
+					"path": "/work/flowChart",
+					"name": "flowChart",
+					"component": "/work/flowChart",
+					"meta": {
+						"title": "流程图",
 						"isLink": "",
 						"isHide": false,
 						"isFull": false,
