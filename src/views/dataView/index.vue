@@ -1,0 +1,119 @@
+<template>
+	<div class="dataScreen-container">
+		<div class="dataScreen" ref="dataScreenRef">
+			<div class="data-header"></div>
+			<div class="data-main">
+				<div class="data-main-left">
+					<div class="left-item">1</div>
+					<div class="left-item">1</div>
+				</div>
+				<div class="data-main-right">
+					<div class="right-item">1</div>
+					<div class="right-item">1</div>
+				</div>
+			</div>
+			<div class="echarts-map-chian">
+				<MapChian />
+			</div>
+			<div class="data-footer"></div>
+		</div>
+	</div>
+</template>
+
+
+<script setup>
+import {onMounted,ref} from 'vue'
+import MapChian from './components/MapChian.vue'
+const dataScreenRef = ref(null)
+onMounted(() => {
+	// 初始化时为外层盒子加上缩放属性，防止刷新界面时就已经缩放
+	if (dataScreenRef.value) {
+		dataScreenRef.value.style.transform = `scale(${getScale()}) translate(-50%, -50%)`;
+		dataScreenRef.value.style.width = `1920px`;
+		dataScreenRef.value.style.height = `1080px`;
+	}
+	// 为浏览器绑定事件
+	window.addEventListener("resize", resize);
+});
+
+/* 根据浏览器大小推断缩放比例 */
+const getScale = (width = 1920, height = 1080) => {
+	let ww = window.innerWidth / width;
+	let wh = window.innerHeight / height;
+	return ww < wh ? ww : wh;
+};
+/* 浏览器监听 resize 事件 */
+const resize = () => {
+	if (dataScreenRef.value) {
+		dataScreenRef.value.style.transform = `scale(${getScale()}) translate(-50%, -50%)`;
+	}
+};
+
+</script>
+
+<style lang="scss" scoped>
+.dataScreen-container{
+		width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100% 100%;
+	background-size: cover;
+	background: #191a20;
+	.dataScreen{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		z-index: 999;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		transition: all 0.3s;
+		transform-origin: left top;
+		.data-header{
+			height: 100px;
+			background: #fff;
+		}
+		.data-main{
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			margin-top: 20px;
+			.data-main-left{
+				.left-item{
+					width: 380px;
+					height: 320px;
+					background: #fff;
+					margin-bottom: 20px;
+				}
+
+			}
+			.data-main-right{
+				.right-item{
+					width: 380px;
+					height: 320px;
+					background: #fff;
+					margin-bottom: 20px;
+				}
+			}
+		}
+		.echarts-map-chian{
+			position: absolute;
+			top: 150px;
+			left: 50%;
+			margin-left: -350px;
+			width: 700px;
+			height: 700px;
+		}
+		.data-footer{
+			width: 100%;
+			height: 280px;
+			background: #fff;
+			z-index: 2;
+
+		}
+		
+	}
+}
+</style>
