@@ -16,20 +16,6 @@
 			}
 		},
 		{
-			"path": "/dataView",
-			"name": "dataView",
-			"component": "/dataView/index",
-			"meta": {
-				"icon": "MessageBox",
-				"title": "大屏数据",
-				"isLink": "",
-				"isHide": false,
-				"isFull": true,
-				"isAffix": false,
-				"isKeepAlive": true
-			}
-		},
-		{
 			"path": "/panel",
 			"name": "panel",
 			"component": "/panel/index",
@@ -39,6 +25,20 @@
 				"isLink": "",
 				"isHide": false,
 				"isFull": false,
+				"isAffix": false,
+				"isKeepAlive": true
+			}
+		},
+		{
+			"path": "/dataView",
+			"name": "dataView",
+			"component": "/dataView/index",
+			"meta": {
+				"icon": "MessageBox",
+				"title": "大屏数据",
+				"isLink": "",
+				"isHide": false,
+				"isFull": true,
 				"isAffix": false,
 				"isKeepAlive": true
 			}
@@ -255,7 +255,7 @@
 						"isHide": false,
 						"isFull": false,
 						"isAffix": false,
-						"isKeepAlive": true
+						"isKeepAlive": false
 					}
 				}
 			]
