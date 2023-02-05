@@ -10,7 +10,7 @@
         <div class="info">
             <div class="name">User</div>
             <div class="introduce">
-            <el-link type="primary">vue-diverse-admin</el-link>
+            <el-link type="primary">{{APPNAME}}</el-link>
             由vue3 + vite + element-plus + ts搭建，支持ts、js混用。自定义主题颜色。界面设置配置。支持4种Layouts布局切换。i18n等...</div>
             <div class="introduce">
                 git地址：<el-link :href="url" target="_blank" type="danger">{{url}}</el-link>
@@ -23,6 +23,8 @@
     </div>
 </template>
 <script setup>
+import { APP_NAME } from "@/config/config";
+const APPNAME = APP_NAME
 const url = 'https://github.com/1164095457/vue-diverse-admin'
 </script>
 <style lang="scss" scoped>

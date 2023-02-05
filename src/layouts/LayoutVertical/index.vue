@@ -5,7 +5,7 @@
 			<div class="menu" :style="{ width: isCollapse ? '65px' : '210px' }">
 				<div class="logo flx-center">
 					<img src="@/assets/images/logo.svg" alt="logo" />
-					<span v-show="!isCollapse">vue-diverse-admin</span>
+					<span v-show="!isCollapse">{{APPNAME}}</span>
 				</div>
 				<el-scrollbar>
 					<el-menu
@@ -42,6 +42,8 @@ import MainApp from "@/layouts/components/Main/index.vue";
 import ToolBarLeft from "@/layouts/components/Header/ToolBarLeft.vue";
 import ToolBarRight from "@/layouts/components/Header/ToolBarRight.vue";
 import SubMenu from "@/layouts/components/Menu/SubMenu.vue";
+import { APP_NAME } from "@/config/config";
+const APPNAME = APP_NAME
 
 const route = useRoute();
 const authStore = AuthStore();
