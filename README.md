@@ -22,6 +22,7 @@
 - 🚀 常用自定义指令开发（复制、水印、拖拽、节流、防抖）
 - 🚀 常用组件开发 有自行封装（全局消息、数字滚动..），第三方的库（富文本、引导页、拖拽..）
 - 🚀 常用办公工具（打印、Excel导出导入、关系图）
+- 🚀 多层菜单嵌套
 - 🚀 echarts大屏适配模板
 - 🚀 支持4种Layout布局，自定义主题颜色，可配置面包屑、标签栏、页脚，锁屏，路由搜索
 - 🚀 支持 i18n 国际化（目前仅在i18n多语言页面配置，需要增加可自行配置）
@@ -96,11 +97,11 @@ vue-diverse-admin
 │  ├─ config              # 全局配置项
 │  ├─ directives          # 全局指令文件
 │  ├─ hooks               # 常用 Hooks
-│  ├─ languages            # 语言国际化
-│  ├─ layouts              # 框架布局
+│  ├─ languages           # 语言国际化
+│  ├─ layouts             # 框架布局
 │  ├─ mock                # mock数据
 │  ├─ routers             # 路由管理
-│  ├─ stores               # pinia 状态管理工具
+│  ├─ stores              # pinia 状态管理工具
 │  ├─ styles              # 全局样式
 │  ├─ utils               # 工具库
 │  ├─ views               # 项目所有页面
@@ -132,6 +133,5 @@ vue-diverse-admin
 
 ### 最后
 
-- 感谢第三方开源库的支撑，项目图片资源源于网络，侵权联系作者删！！
-- 使用过程中碰到问题也可以找作者！！
+- 感谢第三方开源库的支撑，项目图片资源源于网络，侵权联系作者删；使用过程中碰到问题也可以找作者！！
 ![banner](https://gitee.com/lin_zi_quan/vue-diverse-admin/raw/main/src/assets/md/1675495963149.png)
