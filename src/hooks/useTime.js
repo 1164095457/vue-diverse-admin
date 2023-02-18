@@ -9,7 +9,7 @@ export const useTime = () => {
 	const week = ref(""); // 星期几
 	const day = ref(0); // 天数
 	const hour = ref(0); // 小时
-	const minute = ref>(0); // 分钟
+	const minute = ref > 0; // 分钟
 	const second = ref(0); // 秒
 	const nowTime = ref(""); // 当前时间
 

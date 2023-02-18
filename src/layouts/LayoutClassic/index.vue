@@ -5,7 +5,7 @@
 			<div class="header-lf">
 				<div class="logo flx-center">
 					<img src="@/assets/images/logo.svg" alt="logo" />
-					<span>{{APPNAME}}</span>
+					<span>{{ APPNAME }}</span>
 				</div>
 				<ToolBarLeft />
 			</div>
@@ -46,7 +46,7 @@ import SubMenu from "@/layouts/components/Menu/SubMenu.vue";
 import ToolBarLeft from "@/layouts/components/Header/ToolBarLeft.vue";
 import ToolBarRight from "@/layouts/components/Header/ToolBarRight.vue";
 import { APP_NAME } from "@/config/config";
-const APPNAME = APP_NAME
+const APPNAME = APP_NAME;
 
 const route = useRoute();
 const authStore = AuthStore();

@@ -24,13 +24,16 @@
 import { useRouter } from "vue-router";
 
 defineProps({
-	menuList:{
-		type:Array
+	menuList: {
+		type: Array,
+		default() {
+			return [];
+		}
 	}
 });
 
 const router = useRouter();
-const handleClickMenu = (subItem) => {
+const handleClickMenu = subItem => {
 	if (subItem.meta.isLink) return window.open(subItem.meta.isLink, "_blank");
 	router.push(subItem.path);
 };

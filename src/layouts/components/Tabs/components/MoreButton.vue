@@ -16,7 +16,7 @@
 					<el-icon><Remove /></el-icon>关闭当前
 				</el-dropdown-item>
 				<el-dropdown-item @click="closeOtherTab">
-					<el-icon><CircleClose /></el-icon>关闭其他
+					<el-icon> <CircleClose /> </el-icon>关闭其他
 				</el-dropdown-item>
 				<el-dropdown-item @click="closeAllTab">
 					<el-icon><FolderDelete /></el-icon>关闭所有

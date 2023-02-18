@@ -25,7 +25,7 @@
 </template>
 <script setup name="excel">
 import { reactive } from "vue";
-import { utils, write, writeFile, read } from "xlsx";
+import { utils, write, read } from "xlsx";
 import FileSaver from "file-saver";
 import { readFile } from "@/utils/util.js";
 const bindPrint = () => {

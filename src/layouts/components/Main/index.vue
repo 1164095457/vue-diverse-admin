@@ -30,7 +30,7 @@ const isCollapse = computed(() => globalStore.themeConfig.isCollapse);
 
 // 刷新当前页面
 const isRouterShow = ref(true);
-const refreshCurrentPage = (val) => {
+const refreshCurrentPage = val => {
 	isRouterShow.value = val;
 };
 provide("refresh", refreshCurrentPage);

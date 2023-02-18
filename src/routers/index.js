@@ -6,7 +6,6 @@ import { staticRouter, errorRouter } from "@/routers/modules/staticRouter";
 import NProgress from "@/config/nprogress";
 import { LOGIN_URL } from "@/config/config";
 
-
 /**
  * @description 动态路由参数配置简介
  * @param path ==> 菜单路径

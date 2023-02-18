@@ -3,12 +3,14 @@
 </template>
 
 <script setup>
-const props = defineProps({
-    url:{
-        type:String,
-        default:'https://cn.vuejs.org/',
-    }
-})
+defineProps({
+	url: {
+		type: String,
+		default() {
+			return "";
+		}
+	}
+});
 </script>
 
 <style scoped lang="scss">

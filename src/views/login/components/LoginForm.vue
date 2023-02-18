@@ -16,9 +16,7 @@
 		</el-form-item>
 	</el-form>
 	<div class="login-btn">
-		<el-button @click="login(loginFormRef)" size="large" type="primary" :loading="loading">
-			登录
-		</el-button>
+		<el-button @click="login(loginFormRef)" size="large" type="primary" :loading="loading"> 登录 </el-button>
 		<el-button @click="resetForm(loginFormRef)" size="large">重置</el-button>
 	</div>
 </template>
@@ -29,9 +27,8 @@ import { useRouter } from "vue-router";
 import { ElNotification } from "element-plus";
 import { GlobalStore } from "@/stores";
 import { TabsStore } from "@/stores/modules/tabs";
-import { CircleClose, UserFilled } from "@element-plus/icons-vue";
 import { HOME_URL } from "@/config/config";
-import { pageLogin } from '@/api/login' 
+import { pageLogin } from "@/api/login";
 
 const router = useRouter();
 const tabsStore = TabsStore();
@@ -46,13 +43,13 @@ const loginRules = reactive({
 
 const loading = ref(false);
 const loginForm = reactive({ username: "", password: "" });
-const login = (formEl) => {
+const login = formEl => {
 	if (!formEl) return;
 	formEl.validate(async valid => {
 		if (!valid) return;
 		loading.value = true;
 		try {
-			const { data } = await pageLogin()
+			const { data } = await pageLogin();
 			globalStore.setToken(data.token);
 			tabsStore.closeMultipleTab();
 
@@ -70,13 +67,10 @@ const login = (formEl) => {
 };
 
 // resetForm
-const resetForm = (formEl) => {
+const resetForm = formEl => {
 	if (!formEl) return;
 	formEl.resetFields();
 };
-
-
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>

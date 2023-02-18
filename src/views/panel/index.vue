@@ -65,36 +65,36 @@ import PancelLine from "./components/PancelLine.vue";
 import progressBar from "./components/progressBar.vue";
 import PancePice from "./components/PancePie.vue";
 import PancelPictorialBar from "./components/PancelPictorialBar.vue";
-const countList = [
-	{
-		name: "浏览量",
-		date: "周",
-		type: "",
-		count: 2022,
-		icon: new URL("@/assets/images/see.png", import.meta.url).href
-	},
-	{
-		name: "下载量",
-		date: "年",
-		type: "success",
-		count: 21999,
-		icon: new URL("@/assets/images/upload.png", import.meta.url).href
-	},
-	{
-		name: "成交金额",
-		date: "日",
-		type: "warning",
-		count: 18000,
-		icon: new URL("@/assets/images/money.png", import.meta.url).href
-	},
-	{
-		name: "数据",
-		date: "月",
-		type: "danger",
-		count: 18999,
-		icon: new URL("@/assets/images/pie.png", import.meta.url).href
-	}
-];
+// const countList = [
+// 	{
+// 		name: "浏览量",
+// 		date: "周",
+// 		type: "",
+// 		count: 2022,
+// 		icon: new URL("@/assets/images/see.png", import.meta.url).href
+// 	},
+// 	{
+// 		name: "下载量",
+// 		date: "年",
+// 		type: "success",
+// 		count: 21999,
+// 		icon: new URL("@/assets/images/upload.png", import.meta.url).href
+// 	},
+// 	{
+// 		name: "成交金额",
+// 		date: "日",
+// 		type: "warning",
+// 		count: 18000,
+// 		icon: new URL("@/assets/images/money.png", import.meta.url).href
+// 	},
+// 	{
+// 		name: "数据",
+// 		date: "月",
+// 		type: "danger",
+// 		count: 18999,
+// 		icon: new URL("@/assets/images/pie.png", import.meta.url).href
+// 	}
+// ];
 const tableData = [
 	{
 		name: "王二蛋",

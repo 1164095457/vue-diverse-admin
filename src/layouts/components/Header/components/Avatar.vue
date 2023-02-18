@@ -29,7 +29,6 @@ import { GlobalStore } from "@/stores";
 import { LOGIN_URL } from "@/config/config";
 import { resetRouter } from "@/routers/index";
 import { useRouter } from "vue-router";
-import { ElMessageBox, ElMessage } from "element-plus";
 import InfoDialog from "./InfoDialog.vue";
 import PasswordDialog from "./PasswordDialog.vue";
 import { AuthStore } from "@/stores/modules/auth";
@@ -41,15 +40,15 @@ const authStore = AuthStore();
 // 退出登录
 const logout = () => {
 	globalStore.setToken("");
-	authStore.authMenuList = []
-	resetRouter()
+	authStore.authMenuList = [];
+	resetRouter();
 	router.replace(LOGIN_URL);
 };
 
 const infoRef = ref(null);
 const passwordRef = ref(null);
 // 打开修改密码和个人信息弹窗
-const openDialog = (refName) => {
+const openDialog = refName => {
 	if (refName == "infoRef") infoRef.value?.openDialog();
 	else passwordRef.value?.openDialog();
 };

@@ -1,5 +1,3 @@
-import MessageBox from './src/index'
+import MessageBox from "./src/index";
 
-export{
-    MessageBox
-}
+export { MessageBox };

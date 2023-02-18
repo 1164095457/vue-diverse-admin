@@ -1,5 +1,3 @@
-import LockScreen from './src/index'
+import LockScreen from "./src/index";
 
-export{
-    LockScreen
-}
+export { LockScreen };

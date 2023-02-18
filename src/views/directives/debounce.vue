@@ -5,11 +5,11 @@
 </template>
 
 <script setup name="debounce">
-import { ElMessage } from 'element-plus'
+import { ElMessage } from "element-plus";
 const handleDebounce = () => {
-    ElMessage({
-    message: '我是防抖指令',
-    type: 'success',
-  })
+	ElMessage({
+		message: "我是防抖指令",
+		type: "success"
+	});
 };
 </script>

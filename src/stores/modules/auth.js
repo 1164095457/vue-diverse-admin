@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import { getFlatArr } from "@/utils/util";
 // import { getAuthButtonListApi, getAuthMenuListApi } from "@/api/modules/login";
 import { getShowMenuList, getAllBreadcrumbList } from "@/utils/util";
-import { routerList } from '@/api/login.js'
+import { routerList } from "@/api/login.js";
 
 // AuthStore
 export const AuthStore = defineStore({
@@ -13,7 +13,7 @@ export const AuthStore = defineStore({
 		// 按钮权限列表
 		authButtonList: {},
 		// 菜单权限列表
-		authMenuList:[]
+		authMenuList: []
 	}),
 	getters: {
 		// 按钮权限列表
@@ -35,12 +35,12 @@ export const AuthStore = defineStore({
 		},
 		// getAuthMenuList
 		async getAuthMenuList() {
-			const {data} = await routerList();
+			const { data } = await routerList();
 			this.authMenuList = data.list;
 		},
 		// setRouteName
 		async setRouteName(name) {
 			this.routeName = name;
-		},
+		}
 	}
 });

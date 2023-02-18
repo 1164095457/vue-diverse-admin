@@ -175,7 +175,7 @@ onMounted(() => {
 				},
 				itemStyle: {
 					color: function (data) {
-						var obj = {
+						let obj = {
 							type: "linear",
 							x: 0,
 							y: 0,

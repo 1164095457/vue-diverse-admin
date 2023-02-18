@@ -41,7 +41,6 @@ const themeConfig = computed(() => globalStore.themeConfig);
 onMounted(() => {
 	tabsDrop();
 	initTabs();
-
 });
 
 // 标签拖拽排序
@@ -96,13 +95,13 @@ watch(
 );
 
 // Tab Click
-const tabClick = (tabItem) => {
+const tabClick = tabItem => {
 	const fullPath = tabItem.props.name;
 	router.push(fullPath);
 };
 
 // Remove Tab
-const tabRemove = (fullPath) => {
+const tabRemove = fullPath => {
 	const name = tabStore.tabsMenuList.filter(item => item.path == fullPath)[0].name || "";
 	keepAliveStore.removeKeepLiveName(name);
 	tabStore.removeTabs(fullPath, fullPath == route.fullPath);

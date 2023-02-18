@@ -1,5 +1,5 @@
 <template>
-    <div>
-        {{ $t("test.name") }}
-    </div>
+	<div>
+		{{ $t("test.name") }}
+	</div>
 </template>

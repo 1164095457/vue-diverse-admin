@@ -4,7 +4,7 @@
 			<div class="login-form">
 				<div class="login-logo">
 					<img class="login-icon" src="@/assets/images/logo.svg" alt="" />
-					<h2 class="logo-text">{{APPNAME}}</h2>
+					<h2 class="logo-text">{{ APPNAME }}</h2>
 				</div>
 				<LoginForm />
 			</div>
@@ -20,7 +20,7 @@
 <script setup name="login">
 import LoginForm from "./components/LoginForm.vue";
 import { APP_NAME } from "@/config/config";
-const APPNAME = APP_NAME
+const APPNAME = APP_NAME;
 </script>
 
 <style scoped lang="scss">

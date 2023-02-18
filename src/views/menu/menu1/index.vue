@@ -1,7 +1,4 @@
 <template>
-    <div>
-        menu1
-    </div>
+	<div>menu1</div>
 </template>
-<script setup name="menu1">
-</script>
+<script setup name="menu1"></script>

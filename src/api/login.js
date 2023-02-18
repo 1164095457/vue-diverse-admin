@@ -1,15 +1,15 @@
-import service from '@/utils/service.js'
+import service from "@/utils/service.js";
 
-export const routerList = (data) =>{
-    return service({
-        method:'GET',
-        url:'/api/router/list'
-    })
-}
+export const routerList = () => {
+	return service({
+		method: "GET",
+		url: "/api/router/list"
+	});
+};
 
-export const pageLogin = (data) =>{
-    return service({
-        method:'GET',
-        url:'/api/login'
-    })
-}
+export const pageLogin = () => {
+	return service({
+		method: "GET",
+		url: "/api/login"
+	});
+};

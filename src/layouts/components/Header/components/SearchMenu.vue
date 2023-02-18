@@ -1,6 +1,11 @@
 <template>
 	<div class="layout-search-dialog">
-		<img src="@/assets/svg/sosuo.svg" @click="handleOpen" style="width:20x;height:20px;cursor: pointer;" class="toolBar-icon" />
+		<img
+			src="@/assets/svg/sosuo.svg"
+			@click="handleOpen"
+			style="width: 20x; height: 20px; cursor: pointer"
+			class="toolBar-icon"
+		/>
 		<el-dialog
 			v-model="isShowSearch"
 			width="300px"
@@ -68,8 +73,8 @@ const closeSearch = () => {
 };
 
 // 筛选菜单
-const filterNodeMethod = (queryString) => {
-	return (restaurant) => {
+const filterNodeMethod = queryString => {
+	return restaurant => {
 		return (
 			restaurant.path.toLowerCase().indexOf(queryString.toLowerCase()) > -1 ||
 			restaurant.meta.title.toLowerCase().indexOf(queryString.toLowerCase()) > -1
@@ -78,7 +83,7 @@ const filterNodeMethod = (queryString) => {
 };
 
 // 点击菜单跳转
-const handleClickMenu = (menuItem) => {
+const handleClickMenu = menuItem => {
 	searchMenu.value = "";
 	if (menuItem.meta.isLink) window.open(menuItem.meta.isLink, "_blank");
 	else router.push(menuItem.path);

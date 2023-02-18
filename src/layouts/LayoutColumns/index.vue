@@ -76,7 +76,7 @@ watch(
 		// 当前路由存在 tabs 白名单中 || 当前菜单没有数据直接 return
 		if (TABS_WHITE_LIST.includes(route.path) || !menuList.value.length) return;
 		splitActive.value = route.path;
-		const menuItem = menuList.value.filter((item) => route.path.includes(item.path));
+		const menuItem = menuList.value.filter(item => route.path.includes(item.path));
 		if (menuItem[0].children?.length) return (subMenu.value = menuItem[0].children);
 		subMenu.value = [];
 	},
@@ -87,7 +87,7 @@ watch(
 );
 
 // 切换 SubMenu
-const changeSubMenu = (item) => {
+const changeSubMenu = item => {
 	splitActive.value = item.path;
 	if (item.children?.length) return (subMenu.value = item.children);
 	subMenu.value = [];

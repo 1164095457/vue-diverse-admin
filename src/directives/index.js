@@ -5,8 +5,8 @@ import throttle from "./src/throttle";
 const directivesList = {
 	copy,
 	waterMarker,
-    debounce,
-    throttle
+	debounce,
+	throttle
 };
 
 const directives = {

@@ -1,7 +1,7 @@
 <template>
 	<el-dropdown trigger="click" @command="handleSetLanguage">
 		<!-- <i :class="'iconfont icon-zhongyingwen'" class="toolBar-icon"></i> -->
-		<img src="@/assets/svg/zhongyingwen.svg" style="width:20x;height:20px;cursor: pointer;" />
+		<img src="@/assets/svg/zhongyingwen.svg" style="width: 20x; height: 20px; cursor: pointer" />
 		<template #dropdown>
 			<el-dropdown-menu>
 				<el-dropdown-item :disabled="language && language === 'zh'" command="zh">简体中文</el-dropdown-item>
@@ -22,7 +22,7 @@ const globalStore = GlobalStore();
 const language = computed(() => globalStore.language);
 
 // 切换语言
-const handleSetLanguage = (lang) => {
+const handleSetLanguage = lang => {
 	i18n.locale.value = lang;
 	globalStore.updateLanguage(lang);
 };

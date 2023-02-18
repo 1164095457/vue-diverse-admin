@@ -20,7 +20,7 @@ export const useTheme = () => {
 	};
 
 	// 修改主题颜色
-	const changePrimary = (val) => {
+	const changePrimary = val => {
 		if (!val) {
 			val = DEFAULT_PRIMARY;
 			ElMessage({ type: "success", message: `主题颜色已重置为 ${DEFAULT_PRIMARY}` });
@@ -52,6 +52,6 @@ export const useTheme = () => {
 
 	return {
 		switchDark,
-		changePrimary,
+		changePrimary
 	};
 };

@@ -20,7 +20,6 @@
 	</div>
 </template>
 
-
 <script setup>
 import { onMounted, ref } from "vue";
 import MapChian from "./components/MapChian.vue";

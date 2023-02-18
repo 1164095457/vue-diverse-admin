@@ -65,37 +65,52 @@ export function getTimeState() {
  * @description 获取当前时间
  */
 export function getTime(type) {
-	var myDate = new Date();
-	var myYear = myDate.getFullYear(); 
-	var myMonth = myDate.getMonth() + 1; 
-	var myToday = myDate.getDate(); 
-	var myDay = myDate.getDay(); 
-	var myHour = myDate.getHours(); 
-	var myMinute = myDate.getMinutes();
-	var mySecond = myDate.getSeconds();
-	var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
-	var nowTime;
-		if(type === 1){
-		  nowTime = myYear + '年' + fillZero(myMonth) + '月' + fillZero(myToday) + '日';
-		}else if(type === 2){
-		  nowTime = fillZero(myHour) + ':' + fillZero(myMinute) + ':' + fillZero(mySecond);
-		} else if(type === 3){
-		  nowTime = week[myDay]
-		}else{
-		  nowTime = myYear + '年' + fillZero(myMonth) + '月' + fillZero(myToday) + '日' + ' ' + week[myDay] + ' ' + fillZero(myHour) + ':' +
-		  fillZero(myMinute) + ':' + fillZero(mySecond) + ' ' + '';
+	let myDate = new Date();
+	let myYear = myDate.getFullYear();
+	let myMonth = myDate.getMonth() + 1;
+	let myToday = myDate.getDate();
+	let myDay = myDate.getDay();
+	let myHour = myDate.getHours();
+	let myMinute = myDate.getMinutes();
+	let mySecond = myDate.getSeconds();
+	let week = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+	let nowTime;
+	if (type === 1) {
+		nowTime = myYear + "年" + fillZero(myMonth) + "月" + fillZero(myToday) + "日";
+	} else if (type === 2) {
+		nowTime = fillZero(myHour) + ":" + fillZero(myMinute) + ":" + fillZero(mySecond);
+	} else if (type === 3) {
+		nowTime = week[myDay];
+	} else {
+		nowTime =
+			myYear +
+			"年" +
+			fillZero(myMonth) +
+			"月" +
+			fillZero(myToday) +
+			"日" +
+			" " +
+			week[myDay] +
+			" " +
+			fillZero(myHour) +
+			":" +
+			fillZero(myMinute) +
+			":" +
+			fillZero(mySecond) +
+			" " +
+			"";
+	}
+	function fillZero(str) {
+		let realNum;
+		if (str < 10) {
+			realNum = "0" + str;
+		} else {
+			realNum = str;
 		}
-		function fillZero(str) {
-		  var realNum;
-		  if (str < 10) {
-			  realNum = '0' + str;
-		  } else {
-			  realNum = str;
-		  }
-		  return realNum;
-	  }
-	return nowTime
-  };
+		return realNum;
+	}
+	return nowTime;
+}
 
 /**
  * @description 获取浏览器默认语言
@@ -111,7 +126,6 @@ export function getBrowserLang() {
 	return defaultBrowserLang;
 }
 
-
 /**
  * @description 扁平化数组对象(主要用来处理路由菜单)
  * @param {Array} menuList 所有菜单列表
@@ -124,7 +138,6 @@ export function getFlatArr(menuList) {
 		return flatArr;
 	}, []);
 }
-
 
 /**
  * @description 使用递归，过滤出需要渲染在左侧菜单的列表（剔除 isHide == true 的菜单）
@@ -144,7 +157,7 @@ export function getShowMenuList(menuList) {
  * @param {Object} result 输出的结果
  * @param {String} path 当前递归的路径
  */
-export const getAllBreadcrumbList = (menuList, result = {key:''}, path = []) => {
+export const getAllBreadcrumbList = (menuList, result = { key: "" }, path = []) => {
 	for (const item of menuList) {
 		result[item.path] = [...path, item];
 		if (item.children) getAllBreadcrumbList(item.children, result, result[item.path]);
@@ -152,17 +165,16 @@ export const getAllBreadcrumbList = (menuList, result = {key:''}, path = []) => 
 	return result;
 };
 
-
 /**
  * @description 递把文件按照二进制方式读取
  * @param {File} file 文件源
  */
-export const readFile = file =>{
+export const readFile = file => {
 	return new Promise(resolve => {
 		let reader = new FileReader();
 		reader.readAsBinaryString(file);
-		reader.onload = ev =>{
-			resolve(ev.target.result)
-		}
-	})
-}
+		reader.onload = ev => {
+			resolve(ev.target.result);
+		};
+	});
+};

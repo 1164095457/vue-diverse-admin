@@ -50,31 +50,31 @@ let gridList = ref([
 	}
 }
 .item-1 {
-	background-color: #F44336;
+	background-color: #f44336;
 }
 .item-2 {
-	background-color: #9C27B0;
+	background-color: #9c27b0;
 }
 .item-3 {
-	background-color: #E91E63;
+	background-color: #e91e63;
 }
 .item-4 {
 	background-color: #009688;
 }
 .item-5 {
-	background-color: #03A9F4;
+	background-color: #03a9f4;
 }
 .item-6 {
-	background-color: #FF9800;
+	background-color: #ff9800;
 }
 .item-7 {
-	background-color: #8BC34A;
+	background-color: #8bc34a;
 }
 .item-8 {
-	background-color: #9E9E9E;
+	background-color: #9e9e9e;
 }
 .item-9 {
-	background-color: #673AB7;
+	background-color: #673ab7;
 }
 .chosen {
 	border: 2px solid #795548 !important;

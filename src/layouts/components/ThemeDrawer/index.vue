@@ -104,10 +104,10 @@ import { ref, computed, watch } from "vue";
 import { useTheme } from "@/hooks/useTheme";
 import { GlobalStore } from "@/stores";
 import { DEFAULT_PRIMARY } from "@/config/config";
-import SwitchDark from "@/components/SwitchDark/index.vue";
+// import SwitchDark from "@/components/SwitchDark/index.vue";
 import mittBus from "@/utils/mittBus";
 
-const { changePrimary, changeGreyOrWeak } = useTheme();
+const { changePrimary } = useTheme();
 
 // 预定义主题颜色
 const colorList = [
@@ -127,7 +127,7 @@ const globalStore = GlobalStore();
 const themeConfig = computed(() => globalStore.themeConfig);
 
 // 切换布局方式
-const changeLayout = (val) => {
+const changeLayout = val => {
 	globalStore.setThemeConfig({ ...themeConfig.value, layout: val });
 };
 

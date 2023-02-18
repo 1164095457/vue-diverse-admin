@@ -1,5 +1,5 @@
 <template>
-	<img src="@/assets/svg/pifu.svg"  @click="openDrawer" style="width:20x;height:20px;cursor: pointer;" />
+	<img src="@/assets/svg/pifu.svg" @click="openDrawer" style="width: 20x; height: 20px; cursor: pointer" />
 </template>
 
 <script setup>

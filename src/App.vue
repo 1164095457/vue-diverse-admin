@@ -11,7 +11,6 @@ import { useTheme } from "@/hooks/useTheme";
 import { getBrowserLang } from "@/utils/util";
 import zhCn from "element-plus/es/locale/lang/zh-cn";
 import en from "element-plus/es/locale/lang/en";
-import router from "@/routers/index";
 // 使用主题
 useTheme();
 

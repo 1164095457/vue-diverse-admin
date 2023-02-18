@@ -5,13 +5,11 @@
 </template>
 
 <script setup name="throttle">
-import Message from '@/components/Message'
-import { ElMessage } from 'element-plus'
+import { ElMessage } from "element-plus";
 const throttleClick = () => {
-    ElMessage({
-    message: '我是节流指令',
-    type: 'success',
-  })
+	ElMessage({
+		message: "我是节流指令",
+		type: "success"
+	});
 };
 </script>
-
