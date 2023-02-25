@@ -1,6 +1,6 @@
 <template>
 	<el-breadcrumb :separator-icon="ArrowRight">
-		<transition-group name="breadcrumb" mode="out-in">
+		<transition-group name="breadcrumb" mode="out-in" tag="div">
 			<template v-if="breadcrumbList">
 				<!-- 首页面包屑不要可以直接删除 -->
 				<el-breadcrumb-item :key="HOME_URL" :to="{ path: HOME_URL }" v-if="breadcrumbList[0].meta.title !== '首页'">
