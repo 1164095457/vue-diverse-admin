@@ -1,6 +1,6 @@
 <template>
-	<img v-if="isIcon" src="@/assets/svg/quanping.svg" @click="goToFullScreen" style="width: 25x; height: 25px; cursor: pointer" />
-	<img v-else src="@/assets/svg/quxiaoquanping.svg" @click="goToFullScreen" style="width: 25x; height: 25px; cursor: pointer" />
+	<img v-if="isIcon" src="@/assets/svg/quanping.svg" @click="goToFullScreen" style="width: 25px; height: 25px; cursor: pointer" />
+	<img v-else src="@/assets/svg/quxiaoquanping.svg" @click="goToFullScreen" style="width: 25px; height: 25px; cursor: pointer" />
 </template>
 <script setup>
 import { ref } from "vue";
