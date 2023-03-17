@@ -186,9 +186,6 @@ onMounted(() => {
 						};
 
 						return obj;
-					},
-					emphasis: {
-						opacity: 1
 					}
 				},
 				data: riskData,

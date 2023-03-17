@@ -130,12 +130,10 @@ onMounted(() => {
 				type: "bar",
 				barWidth: "5",
 				itemStyle: {
-					normal: {
-						color: "transparent"
-					},
-					emphasis: {
-						color: "#2B75D4"
-					}
+					color: "transparent"
+				},
+				emphasis: {
+					color: "#2B75D4"
 				},
 				data: [5.9, 6.9, 10.1, 11.7, 4.3, 6.2, 21.6, 43.6, 51.4, 10.4, 17.3, 0.7]
 			}
