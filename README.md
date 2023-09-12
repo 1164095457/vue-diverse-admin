@@ -28,7 +28,7 @@
 - 🚀 支持 i18n 国际化（目前仅在i18n多语言页面配置，需要增加可自行配置）
 
 
-### 三浏览、🔨🔨🔨 项目功能
+### 三、🌐🌐🌐 浏览地址
 - [🚀 vue-diverse-admin 演示地址（国内地址）](https://lin_zi_quan.gitee.io/vue3-diverse-admin/#/)
 
 ### 四、安装使用步骤 📔
