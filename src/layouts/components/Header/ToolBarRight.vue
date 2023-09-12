@@ -7,7 +7,7 @@
 			<SearchMenu id="searchMenu" />
 			<ThemeSetting id="themeSetting" />
 		</div>
-		<span class="username">User</span>
+		<span class="username">打工人</span>
 		<Avatar />
 	</div>
 </template>

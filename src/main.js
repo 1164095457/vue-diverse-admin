@@ -3,7 +3,7 @@ import App from "./App.vue";
 import "@/styles/reset.scss";
 import "@/styles/common.scss";
 import "@/assets/iconfont/iconfont.scss";
-import "@/assets/fonts/font.scss";
+// import "@/assets/fonts/font.scss";
 import elementIcon from "@/plugins/element-icon";
 import "element-plus/dist/index.css";
 import "@/styles/element.scss";
@@ -19,7 +19,7 @@ import "virtual:svg-icons-register";
 import errorHandler from "@/utils/errorHandler";
 //  自定义指令
 import directives from "@/directives/index";
-
+//  mockJs
 import "./mock/index";
 
 const app = createApp(App);

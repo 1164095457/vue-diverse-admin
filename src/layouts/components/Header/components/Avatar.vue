@@ -5,32 +5,19 @@
 		</div>
 		<template #dropdown>
 			<el-dropdown-menu>
-				<el-dropdown-item @click="openDialog('infoRef')">
-					<el-icon><User /></el-icon>个人信息
-				</el-dropdown-item>
-				<el-dropdown-item @click="openDialog('passwordRef')">
-					<el-icon><Edit /></el-icon>修改密码
-				</el-dropdown-item>
-				<el-dropdown-item @click="logout" divided>
+				<el-dropdown-item @click="logout">
 					<el-icon><SwitchButton /></el-icon>退出登录
 				</el-dropdown-item>
 			</el-dropdown-menu>
 		</template>
 	</el-dropdown>
-	<!-- infoDialog -->
-	<InfoDialog ref="infoRef"></InfoDialog>
-	<!-- passwordDialog -->
-	<PasswordDialog ref="passwordRef"></PasswordDialog>
 </template>
 
 <script setup>
-import { ref } from "vue";
 import { GlobalStore } from "@/stores";
 import { LOGIN_URL } from "@/config/config";
 import { resetRouter } from "@/routers/index";
 import { useRouter } from "vue-router";
-import InfoDialog from "./InfoDialog.vue";
-import PasswordDialog from "./PasswordDialog.vue";
 import { AuthStore } from "@/stores/modules/auth";
 
 const router = useRouter();
@@ -43,14 +30,6 @@ const logout = () => {
 	authStore.authMenuList = [];
 	resetRouter();
 	router.replace(LOGIN_URL);
-};
-
-const infoRef = ref(null);
-const passwordRef = ref(null);
-// 打开修改密码和个人信息弹窗
-const openDialog = refName => {
-	if (refName == "infoRef") infoRef.value?.openDialog();
-	else passwordRef.value?.openDialog();
 };
 </script>
 

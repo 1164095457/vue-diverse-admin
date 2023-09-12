@@ -104,7 +104,6 @@ import { ref, computed, watch } from "vue";
 import { useTheme } from "@/hooks/useTheme";
 import { GlobalStore } from "@/stores";
 import { DEFAULT_PRIMARY } from "@/config/config";
-// import SwitchDark from "@/components/SwitchDark/index.vue";
 import mittBus from "@/utils/mittBus";
 
 const { changePrimary } = useTheme();

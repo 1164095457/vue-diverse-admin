@@ -27,7 +27,11 @@
 - 🚀 支持4种Layout布局，自定义主题颜色，可配置面包屑、标签栏、页脚，锁屏，路由搜索
 - 🚀 支持 i18n 国际化（目前仅在i18n多语言页面配置，需要增加可自行配置）
 
-### 三、安装使用步骤 📔
+
+### 三浏览、🔨🔨🔨 项目功能
+- [🚀 vue-diverse-admin 演示地址（国内地址）](https://lin_zi_quan.gitee.io/vue3-diverse-admin/#/)
+
+### 四、安装使用步骤 📔
 
 - **克隆：**
 
@@ -79,12 +83,12 @@ npm run lint:prettier
 lint:stylelint
 ```
 
-### 四、项目截图 📷
+### 五、项目截图 📷
 
 ![banner](https://gitee.com/lin_zi_quan/vue-diverse-admin/raw/main/src/assets/md/dc155c038e20db06cbb341bfc4ebfc0.png)
 ![banner](https://gitee.com/lin_zi_quan/vue-diverse-admin/raw/main/src/assets/md/4645021975f6b673cabc4ac71dc4bed.png)
 
-### 五、文件资源目录 📚
+### 六、文件资源目录 📚
 
 ```text
 vue-diverse-admin

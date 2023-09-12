@@ -24,12 +24,8 @@ export const GlobalStore = defineStore({
 			layout: "vertical",
 			// 默认 primary 主题颜色
 			primary: DEFAULT_PRIMARY,
-			// 深色模式
+			// 黑夜模式
 			isDark: false,
-			// 灰色模式
-			isGrey: false,
-			// 色弱模式
-			isWeak: false,
 			// 折叠菜单
 			isCollapse: false,
 			// 面包屑导航
