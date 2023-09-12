@@ -4,10 +4,13 @@
 			<el-tabs v-model="tabsMenuValue" type="card" @tab-click="tabClick" @tab-remove="tabRemove">
 				<el-tab-pane v-for="item in tabsMenuList" :key="item.path" :label="item.title" :name="item.path" :closable="item.close">
 					<template #label>
-						<el-icon class="tabs-icon" v-if="item.icon && themeConfig.tabsIcon">
-							<component :is="item.icon"></component>
-						</el-icon>
-						{{ item.title }}
+						<el-button
+							size="default"
+							:icon="themeConfig.tabsIcon ? item.icon : ''"
+							:type="tabsMenuValue === item.path ? 'primary' : ''"
+						>
+							{{ item.title }}
+						</el-button>
 					</template>
 				</el-tab-pane>
 			</el-tabs>
@@ -24,7 +27,6 @@ import { GlobalStore } from "@/stores";
 import { TabsStore } from "@/stores/modules/tabs";
 import { AuthStore } from "@/stores/modules/auth";
 import { KeepAliveStore } from "@/stores/modules/keepAlive";
-// import { TabsPaneContext } from "element-plus";
 import MoreButton from "./components/MoreButton.vue";
 
 const route = useRoute();
