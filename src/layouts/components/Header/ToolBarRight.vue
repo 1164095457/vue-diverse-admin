@@ -5,6 +5,7 @@
 			<FullScreen />
 			<Language id="language" />
 			<SearchMenu id="searchMenu" />
+			<ColorPicker />
 			<ThemeSetting id="themeSetting" />
 		</div>
 		<span class="username">打工人</span>
@@ -19,6 +20,7 @@ import ThemeSetting from "./components/ThemeSetting.vue";
 import LockScreen from "./components/LockScreen.vue";
 import FullScreen from "./components/FullScreen.vue";
 import Avatar from "./components/Avatar.vue";
+import ColorPicker from "./components/ColorPicker.vue";
 </script>
 
 <style scoped lang="scss">
@@ -31,7 +33,7 @@ import Avatar from "./components/Avatar.vue";
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: 140px;
+		width: 180px;
 		margin-right: 22px;
 	}
 	.username {
