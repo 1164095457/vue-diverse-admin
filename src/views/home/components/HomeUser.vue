@@ -33,7 +33,7 @@ import { getTimeState } from "@/utils/util.js";
 	background: #fff;
 	text-align: center;
 	padding: 16px;
-	height: 341px;
+	height: 335px;
 	.greet {
 		text-align: left;
 		display: flex;

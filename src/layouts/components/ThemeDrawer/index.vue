@@ -56,14 +56,14 @@
 		</div>
 		<br />
 
-		<!-- 全局主题 -->
+		<!-- 主题 -->
 		<el-divider class="divider" content-position="center">
 			<el-icon><ColdDrink /></el-icon>
-			全局主题
+			主题
 		</el-divider>
 		<div class="theme-item">
-			<span>主题颜色</span>
-			<el-color-picker v-model="themeConfig.primary" :predefine="colorList" @change="changePrimary" />
+			<span>黑夜模式（需自行配置）</span>
+			<el-switch v-model="themeConfig.isDark" @change="onAddDarkChange" inline-prompt />
 		</div>
 		<br />
 
@@ -101,26 +101,10 @@
 
 <script setup>
 import { ref, computed, watch } from "vue";
-import { useTheme } from "@/hooks/useTheme";
 import { GlobalStore } from "@/stores";
-import { DEFAULT_PRIMARY } from "@/config/config";
 import mittBus from "@/utils/mittBus";
-
-const { changePrimary } = useTheme();
-
-// 预定义主题颜色
-const colorList = [
-	DEFAULT_PRIMARY,
-	"#DAA96E",
-	"#0C819F",
-	"#409EFF",
-	"#27ae60",
-	"#ff5c93",
-	"#e74c3c",
-	"#fd726d",
-	"#f39c12",
-	"#9b59b6"
-];
+import { useTheme } from "@/hooks/useTheme";
+const { switchDark } = useTheme();
 
 const globalStore = GlobalStore();
 const themeConfig = computed(() => globalStore.themeConfig);
@@ -143,6 +127,10 @@ watch(
 // 打开主题设置
 const drawerVisible = ref(false);
 mittBus.on("openThemeDrawer", () => (drawerVisible.value = true));
+
+const onAddDarkChange = () => {
+	switchDark();
+};
 </script>
 
 <style scoped lang="scss">

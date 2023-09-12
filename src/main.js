@@ -7,6 +7,8 @@ import "@/assets/iconfont/iconfont.scss";
 import elementIcon from "@/plugins/element-icon";
 import "element-plus/dist/index.css";
 import "@/styles/element.scss";
+import "@/styles/element-dark.scss";
+import "element-plus/theme-chalk/dark/css-vars.css";
 // 路由
 import router from "@/routers/index";
 // i18n

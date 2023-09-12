@@ -1,7 +1,7 @@
 <template>
 	<el-dropdown trigger="click" @command="handleSetLanguage">
-		<!-- <i :class="'iconfont icon-zhongyingwen'" class="toolBar-icon"></i> -->
-		<img src="@/assets/svg/zhongyingwen.svg" style="width: 20x; height: 20px; cursor: pointer" />
+		<i :class="'iconfont icon-zhongyingwen'" class="toolBar-icon"></i>
+		<!-- <img src="@/assets/svg/zhongyingwen.svg" style="width: 20x; height: 20px; cursor: pointer" /> -->
 		<template #dropdown>
 			<el-dropdown-menu>
 				<el-dropdown-item :disabled="language && language === 'zh'" command="zh">简体中文</el-dropdown-item>

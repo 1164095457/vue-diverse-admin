@@ -1,5 +1,5 @@
 import { computed, onBeforeMount } from "vue";
-import { getLightColor, getDarkColor } from "@/utils/theme/tool";
+import { getLightColor, getDarkColor } from "@/utils/tool";
 import { GlobalStore } from "@/stores";
 import { DEFAULT_PRIMARY } from "@/config/config";
 import { ElMessage } from "element-plus";
@@ -35,12 +35,27 @@ export const useTheme = () => {
 			);
 		}
 	};
+	// 切换黑夜模式
+	const switchDark = () => {
+		const body = document.documentElement;
+		if (themeConfig.value.isDark) body.setAttribute("class", "dark");
+		else body.setAttribute("class", "");
+		changePrimary(themeConfig.value.primary);
+	};
 
 	onBeforeMount(() => {
 		changePrimary(themeConfig.value.primary);
 	});
 
+	// 初始化 theme 配置
+	const initTheme = () => {
+		switchDark();
+		changePrimary(themeConfig.value.primary);
+	};
+
 	return {
-		changePrimary
+		changePrimary,
+		switchDark,
+		initTheme
 	};
 };
