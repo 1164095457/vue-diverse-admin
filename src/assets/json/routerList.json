@@ -30,18 +30,33 @@
 			}
 		},
 		{
-			"path": "/dataView",
-			"name": "dataView",
-			"component": "/dataView/index",
+			"path": "/auth",
+			"name": "auth",
+			"redirect": "/auth/button",
 			"meta": {
-				"icon": "Monitor",
-				"title": "大屏数据",
+				"icon": "User",
+				"title": "权限控制",
 				"isLink": "",
 				"isHide": false,
-				"isFull": true,
+				"isFull": false,
 				"isAffix": false,
 				"isKeepAlive": true
-			}
+			},
+			"children": [
+				{
+					"path": "/auth/button",
+					"name": "authButton",
+					"component": "/auth/authButton",
+					"meta": {
+						"title": "控制按钮",
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
+				}
+			]
 		},
 		{
 			"path": "/assembly",
@@ -368,6 +383,20 @@
 				"isLink": "",
 				"isHide": false,
 				"isFull": false,
+				"isAffix": false,
+				"isKeepAlive": true
+			}
+		},
+		{
+			"path": "/dataView",
+			"name": "dataView",
+			"component": "/dataView/index",
+			"meta": {
+				"icon": "Monitor",
+				"title": "大屏数据",
+				"isLink": "",
+				"isHide": false,
+				"isFull": true,
 				"isAffix": false,
 				"isKeepAlive": true
 			}

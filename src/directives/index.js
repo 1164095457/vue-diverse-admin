@@ -2,11 +2,14 @@ import copy from "./src/copy";
 import waterMarker from "./src/waterMarker";
 import debounce from "./src/debounce";
 import throttle from "./src/throttle";
+import authButton from "./src/authButton";
+
 const directivesList = {
 	copy,
 	waterMarker,
 	debounce,
-	throttle
+	throttle,
+	authButton
 };
 
 const directives = {

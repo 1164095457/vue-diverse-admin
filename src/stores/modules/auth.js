@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { getFlatArr } from "@/utils/util";
-// import { getAuthButtonListApi, getAuthMenuListApi } from "@/api/modules/login";
+import { getAuthButton } from "@/api/login";
 import { getShowMenuList, getAllBreadcrumbList } from "@/utils/util";
 import { routerList } from "@/api/login.js";
 
@@ -30,8 +30,8 @@ export const AuthStore = defineStore({
 	actions: {
 		// getAuthButtonList
 		async getAuthButtonList() {
-			const { data } = await getAuthButtonListApi();
-			this.authButtonList = data;
+			const { data } = await getAuthButton();
+			this.authButtonList = data.list;
 		},
 		// getAuthMenuList
 		async getAuthMenuList() {

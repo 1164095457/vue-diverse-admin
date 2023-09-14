@@ -13,6 +13,7 @@ declare module 'vue' {
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
     ElBreadcrumbItem: typeof import('element-plus/es')['ElBreadcrumbItem']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElCol: typeof import('element-plus/es')['ElCol']
     ElColorPicker: typeof import('element-plus/es')['ElColorPicker']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
@@ -48,7 +49,6 @@ declare module 'vue' {
     LockScreen: typeof import('./src/components/LockScreen/src/LockScreen.vue')['default']
     Message: typeof import('./src/components/Message/src/Message.vue')['default']
     MessageBox: typeof import('./src/components/MessageBox/src/MessageBox.vue')['default']
-    SwitchDark: typeof import('./src/components/SwitchDark/index.vue')['default']
     WangEditor: typeof import('./src/components/WangEditor/index.vue')['default']
     Webpage: typeof import('./src/components/Webpage/index.vue')['default']
   }

@@ -13,6 +13,7 @@ export const initDynamicRouter = async () => {
 	const authStore = AuthStore();
 	try {
 		await authStore.getAuthMenuList();
+		await authStore.getAuthButtonList();
 		// 添加动态路由
 		authStore.flatMenuListGet.forEach(item => {
 			item.children && delete item.children;

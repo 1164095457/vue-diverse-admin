@@ -13,3 +13,10 @@ export const pageLogin = () => {
 		url: "/api/login"
 	});
 };
+
+export const getAuthButton = () => {
+	return service({
+		method: "GET",
+		url: "/api/auth/button"
+	});
+};
