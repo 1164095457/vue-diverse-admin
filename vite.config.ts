@@ -9,7 +9,6 @@ import viteCompression from "vite-plugin-compression";
 import VueSetupExtend from "vite-plugin-vue-setup-extend";
 import eslintPlugin from "vite-plugin-eslint";
 import vueJsx from "@vitejs/plugin-vue-jsx";
-import importToCDN from "vite-plugin-cdn-import";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
@@ -20,7 +19,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 	const viteEnv = wrapperEnv(env);
 
 	return {
-		base: "/",
+		base: "./",
 		resolve: {
 			alias: {
 				"@": resolve(__dirname, "./src")
@@ -79,17 +78,13 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 					algorithm: "gzip",
 					ext: ".gz"
 				}),
-			// * cdn 引入（vue按需引入会导致依赖vue的插件出现问题(列如:pinia/vuex)）
-			importToCDN({
-				modules: []
-			}),
 			// * demand import element
 			AutoImport({
 				resolvers: [ElementPlusResolver()]
 			}),
 			Components({
 				resolvers: [ElementPlusResolver()]
-			}),
+			})
 		],
 		esbuild: {
 			pure: viteEnv.VITE_DROP_CONSOLE ? ["console.log", "debugger"] : []
