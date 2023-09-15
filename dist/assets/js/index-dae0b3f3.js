@@ -1,1 +1,0 @@
-import{_ as e,o as n,c}from"./index-e27f3969.js";const r={};function i(s,t){return n(),c("div",null,"menu1")}const o=e(r,[["render",i],["__file","D:/item_file/vue-diverse-admin/src/views/menu/menu1/index.vue"]]);export{o as default};
