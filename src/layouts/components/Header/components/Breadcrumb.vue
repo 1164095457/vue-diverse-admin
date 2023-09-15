@@ -3,7 +3,7 @@
 		<transition-group name="breadcrumb" mode="out-in" tag="div">
 			<template v-if="breadcrumbList">
 				<!-- 首页面包屑不要可以直接删除 -->
-				<el-breadcrumb-item :key="HOME_URL" :to="{ path: HOME_URL }" v-if="breadcrumbList[0].meta.title !== '首页'">
+				<el-breadcrumb-item :key="HOME_URL" :to="{ path: HOME_URL }" v-if="breadcrumbList[0].title !== '首页'">
 					<div class="breadcrumb-item">
 						<el-icon class="breadcrumb-icon" v-if="themeConfig.breadcrumbIcon">
 							<HomeFilled />
@@ -17,7 +17,7 @@
 						<el-icon class="breadcrumb-icon" v-if="item.meta.icon && themeConfig.breadcrumbIcon">
 							<component :is="item.meta.icon"></component>
 						</el-icon>
-						<span class="breadcrumb-title">{{ item.meta.title }}</span>
+						<span class="breadcrumb-title">{{ item.title }}</span>
 					</div>
 				</el-breadcrumb-item>
 			</template>

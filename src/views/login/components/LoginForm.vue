@@ -29,10 +29,13 @@ import { GlobalStore } from "@/stores";
 import { TabsStore } from "@/stores/modules/tabs";
 import { HOME_URL } from "@/config/config";
 import { pageLogin } from "@/api/login";
+import { initDynamicRouter } from "@/routers/modules/dynamicRouter";
+import { KeepAliveStore } from "@/stores/modules/keepAlive";
 
 const router = useRouter();
 const tabsStore = TabsStore();
 const globalStore = GlobalStore();
+const keepAlive = KeepAliveStore();
 
 // 定义 formRef（校验规则）
 const loginFormRef = ref();
@@ -51,8 +54,9 @@ const login = formEl => {
 		try {
 			const { data } = await pageLogin();
 			globalStore.setToken(data.token);
+			await initDynamicRouter();
 			tabsStore.closeMultipleTab();
-
+			keepAlive.setKeepAliveName();
 			router.push(HOME_URL);
 			ElNotification({
 				title: data.name,

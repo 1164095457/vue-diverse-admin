@@ -22,7 +22,7 @@
 							<el-icon>
 								<component :is="subItem.meta.icon"></component>
 							</el-icon>
-							<span>{{ subItem.meta.title }}</span>
+							<span>{{ subItem.title }}</span>
 						</template>
 						<SubMenu :menuList="subItem.children" />
 					</el-sub-menu>
@@ -31,7 +31,7 @@
 							<component :is="subItem.meta.icon"></component>
 						</el-icon>
 						<template #title>
-							<span>{{ subItem.meta.title }}</span>
+							<span>{{ subItem.title }}</span>
 						</template>
 					</el-menu-item>
 				</template>
@@ -49,12 +49,13 @@ import { useRoute, useRouter } from "vue-router";
 import Main from "@/layouts/components/Main/index.vue";
 import ToolBarRight from "@/layouts/components/Header/ToolBarRight.vue";
 import SubMenu from "@/layouts/components/Menu/SubMenu.vue";
+import { setAuthMenuList } from "@/utils/util";
 
 const route = useRoute();
 const router = useRouter();
 const authStore = AuthStore();
 const activeMenu = computed(() => (route.meta.activeMenu ? route.meta.activeMenu : route.path));
-const menuList = computed(() => authStore.showMenuListGet);
+const menuList = computed(() => setAuthMenuList(authStore.showMenuListGet));
 
 const handleClickMenu = subItem => {
 	if (subItem.meta.isLink) return window.open(subItem.meta.isLink, "_blank");

@@ -17,7 +17,7 @@
 						<el-icon>
 							<component :is="item.meta.icon"></component>
 						</el-icon>
-						<span class="title">{{ item.meta.title }}</span>
+						<span class="title">{{ item.title }}</span>
 					</div>
 				</div>
 			</el-scrollbar>
@@ -59,13 +59,15 @@ import Main from "@/layouts/components/Main/index.vue";
 import ToolBarLeft from "@/layouts/components/Header/ToolBarLeft.vue";
 import ToolBarRight from "@/layouts/components/Header/ToolBarRight.vue";
 import SubMenu from "@/layouts/components/Menu/SubMenu.vue";
+import { setAuthMenuList } from "@/utils/util";
 
 const route = useRoute();
 const router = useRouter();
 const authStore = AuthStore();
 const globalStore = GlobalStore();
 const activeMenu = computed(() => (route.meta.activeMenu ? route.meta.activeMenu : route.path));
-const menuList = computed(() => authStore.showMenuListGet);
+const menuList = computed(() => setAuthMenuList(authStore.showMenuListGet));
+
 const isCollapse = computed(() => globalStore.themeConfig.isCollapse);
 
 const subMenu = ref([]);

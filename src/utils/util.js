@@ -181,3 +181,47 @@ export const readFile = file => {
 		};
 	});
 };
+
+/**
+ * @description 列表生成树状结构
+ * @param {Array} items 列表
+ * @param {String} parentId 父id
+ * @return array
+ */
+export function generateTree(items, parentId = null) {
+	let result = [];
+	for (let item of items) {
+		if (item.parentId === parentId) {
+			let children = generateTree(items, item.id);
+			if (children.length) {
+				item.children = children;
+			}
+			result.push(item);
+		}
+	}
+	return result;
+}
+
+/**
+ * @description 权限控制渲染菜单
+ * @param {Array} items 列表
+ * @return array
+ */
+export const setAuthMenuList = items => {
+	const arr = [];
+	const authRouter = JSON.parse(localStorage.getItem("router")) || [];
+	if (authRouter.length > 0) {
+		const list = getFlatArr(items);
+		authRouter.forEach(e1 => {
+			list.forEach(e2 => {
+				e2.children = [];
+				if (e1 === e2.id) {
+					arr.push(e2);
+				}
+			});
+		});
+		return generateTree(arr);
+	} else {
+		return items;
+	}
+};

@@ -10,12 +10,26 @@ const modules = import.meta.glob("@/views/**/*.vue");
  * 初始化动态路由
  */
 export const initDynamicRouter = async () => {
+	let list = [];
+	const authRouter = JSON.parse(localStorage.getItem("router")) || [];
+
 	const authStore = AuthStore();
 	try {
 		await authStore.getAuthMenuList();
 		await authStore.getAuthButtonList();
+		if (authRouter.length > 0) {
+			authRouter.forEach(e1 => {
+				authStore.flatMenuListGet.forEach(e2 => {
+					if (e1 === e2.id) {
+						list.push(e2);
+					}
+				});
+			});
+		} else {
+			list = authStore.flatMenuListGet;
+		}
 		// 添加动态路由
-		authStore.flatMenuListGet.forEach(item => {
+		list.forEach(item => {
 			item.children && delete item.children;
 			if (item.component && isType(item.component) == "string") {
 				item.component = modules["/src/views" + item.component + ".vue"];

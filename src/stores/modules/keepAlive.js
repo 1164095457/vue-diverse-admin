@@ -19,6 +19,10 @@ export const KeepAliveStore = defineStore({
 		// clearMultipleKeepAlive
 		async clearMultipleKeepAlive(keepLiveName = []) {
 			this.keepLiveName = keepLiveName;
+		},
+		// setKeepAliveName
+		async setKeepAliveName(keepLiveName = []) {
+			this.keepLiveName = keepLiveName;
 		}
 	}
 });

@@ -4,7 +4,7 @@ import { GlobalStore } from "@/stores";
 import { initDynamicRouter } from "@/routers/modules/dynamicRouter";
 import { staticRouter, errorRouter } from "@/routers/modules/staticRouter";
 import NProgress from "@/config/nprogress";
-import { LOGIN_URL } from "@/config/config";
+import { LOGIN_URL, ROUTER_WHITE_LIST } from "@/config/config";
 
 /**
  * @description 动态路由参数配置简介
@@ -14,7 +14,7 @@ import { LOGIN_URL } from "@/config/config";
  * @param component ==> 视图文件路径
  * @param meta ==> 菜单信息
  * @param meta.icon ==> 菜单图标
- * @param meta.title ==> 菜单标题
+ * @param title ==> 菜单标题
  * @param meta.activeMenu ==> 当前路由为详情页时，需要高亮的菜单
  * @param meta.isLink ==> 是否外链
  * @param meta.isHide ==> 是否隐藏
@@ -36,15 +36,14 @@ router.beforeEach(async (to, from, next) => {
 	NProgress.start();
 
 	const title = import.meta.env.VITE_GLOB_APP_TITLE;
-	document.title = to.meta.title ? `${to.meta.title} - ${title}` : title;
-
+	document.title = to.title ? `${to.title} - ${title}` : title;
 	if (to.path === LOGIN_URL) {
-		if (!globalStore.token) return next();
-		else return next(from.fullPath);
+		if (globalStore.token) return next(from.fullPath);
+		resetRouter();
+		return next();
 	}
-
-	console.log(globalStore.token);
-	if (!globalStore.token) return next(LOGIN_URL);
+	if (ROUTER_WHITE_LIST.includes(to.path)) return next();
+	if (!globalStore.token) return next({ path: LOGIN_URL, replace: true });
 
 	const authStore = AuthStore();
 	authStore.setRouteName(to.name);
@@ -62,7 +61,7 @@ export const resetRouter = () => {
 	const authStore = AuthStore();
 	authStore.flatMenuListGet.forEach(route => {
 		const { name } = route;
-		router.removeRoute(name);
+		if (name && router.hasRoute(name)) router.removeRoute(name);
 	});
 };
 

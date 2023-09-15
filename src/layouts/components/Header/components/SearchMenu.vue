@@ -32,7 +32,7 @@
 					<el-icon>
 						<component :is="item.meta.icon"></component>
 					</el-icon>
-					<span> {{ item.meta.title }} </span>
+					<span> {{ item.title }} </span>
 				</template>
 			</el-autocomplete>
 		</el-dialog>
@@ -77,7 +77,7 @@ const filterNodeMethod = queryString => {
 	return restaurant => {
 		return (
 			restaurant.path.toLowerCase().indexOf(queryString.toLowerCase()) > -1 ||
-			restaurant.meta.title.toLowerCase().indexOf(queryString.toLowerCase()) > -1
+			restaurant.title.toLowerCase().indexOf(queryString.toLowerCase()) > -1
 		);
 	};
 };

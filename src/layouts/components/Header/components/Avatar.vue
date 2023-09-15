@@ -16,19 +16,14 @@
 <script setup>
 import { GlobalStore } from "@/stores";
 import { LOGIN_URL } from "@/config/config";
-import { resetRouter } from "@/routers/index";
 import { useRouter } from "vue-router";
-import { AuthStore } from "@/stores/modules/auth";
 
 const router = useRouter();
 const globalStore = GlobalStore();
-const authStore = AuthStore();
 
 // 退出登录
 const logout = () => {
 	globalStore.setToken("");
-	authStore.authMenuList = [];
-	resetRouter();
 	router.replace(LOGIN_URL);
 };
 </script>

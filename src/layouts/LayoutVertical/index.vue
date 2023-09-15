@@ -43,13 +43,15 @@ import ToolBarLeft from "@/layouts/components/Header/ToolBarLeft.vue";
 import ToolBarRight from "@/layouts/components/Header/ToolBarRight.vue";
 import SubMenu from "@/layouts/components/Menu/SubMenu.vue";
 import { APP_NAME } from "@/config/config";
+import { setAuthMenuList } from "@/utils/util";
+
 const APPNAME = APP_NAME;
 
 const route = useRoute();
 const authStore = AuthStore();
 const globalStore = GlobalStore();
 const activeMenu = computed(() => (route.meta.activeMenu ? route.meta.activeMenu : route.path));
-const menuList = computed(() => authStore.showMenuListGet);
+const menuList = computed(() => setAuthMenuList(authStore.showMenuListGet));
 const isCollapse = computed(() => globalStore.themeConfig.isCollapse);
 </script>
 
