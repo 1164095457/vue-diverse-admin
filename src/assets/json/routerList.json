@@ -9,7 +9,6 @@
 			"parentId": null,
 			"title": "首页",
 			"disabled": true,
-			"parentCheck": true,
 			"meta": {
 				"icon": "HomeFilled",
 				"isLink": "",
@@ -26,7 +25,6 @@
 			"id": "b",
 			"parentId": null,
 			"title": "面板",
-			"parentCheck": true,
 			"meta": {
 				"icon": "MessageBox",
 				"isLink": "",
@@ -458,7 +456,6 @@
 			"id": "h",
 			"parentId": null,
 			"title": "i18n多语言",
-			"parentCheck": true,
 			"meta": {
 				"icon": "SetUp",
 				"isLink": "",
@@ -475,7 +472,6 @@
 			"id": "i",
 			"parentId": null,
 			"title": "大屏数据",
-			"parentCheck": true,
 			"meta": {
 				"icon": "Monitor",
 				"isLink": "",
