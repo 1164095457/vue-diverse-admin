@@ -189,6 +189,21 @@
 						"isAffix": false,
 						"isKeepAlive": true
 					}
+				},
+				{
+					"path": "/assembly/loading",
+					"name": "loading",
+					"component": "/assembly/loading",
+					"id": "d7",
+					"parentId": "d",
+					"title": "加载动画",
+					"meta": {
+						"isLink": "",
+						"isHide": false,
+						"isFull": false,
+						"isAffix": false,
+						"isKeepAlive": true
+					}
 				}
 			]
 		},
